@@ -1,27 +1,25 @@
 package com.jnkhan.transfomersfightclub
 
+import android.net.Uri
 import android.os.Bundle
+import android.widget.ImageView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.tabs.TabLayout
-import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
-import com.jnkhan.transfomersfightclub.view.SectionsPagerAdapter
+import com.bumptech.glide.Glide
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val sectionsPagerAdapter =
-            SectionsPagerAdapter(
-                this,
-                supportFragmentManager
-            )
-        val viewPager: ViewPager = findViewById(R.id.view_pager)
-        viewPager.adapter = sectionsPagerAdapter
-        val tabs: TabLayout = findViewById(R.id.tabs)
-        tabs.setupWithViewPager(viewPager)
+
+        var image = findViewById<ImageView>(R.id.background_image)
+
+        Glide.with(applicationContext)
+            .load(Uri.parse("https://i.pinimg.com/originals/fc/1c/f6/fc1cf6acc84ad1dc76c62be24e19409f.jpg"))
+            .into(image)
+
         val fab: FloatingActionButton = findViewById(R.id.fab)
 
         fab.setOnClickListener { view ->
