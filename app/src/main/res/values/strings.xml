@@ -1,5 +1,194 @@
 <resources>
     <string name="app_name">Transfomers Fight Club</string>
-    <string name="tab_text_1">Autobots</string>
-    <string name="tab_text_2">Decepticons</string>
+
+    <string-array name="autobotStats">
+        <item>Afterburner,7.0,6.0,6.0,6.0,5.0,9.0,7.0,7.0,Afterburner</item>
+        <item>Air Raid,5.0,7.0,9.0,7.0,5.0,10.0,8.0,7.0,Air_Raid</item>
+        <item>Beachcomber,3.0,9.0,5.0,9.0,6.0,6.0,1.0,10.0,Beachcomber</item>
+        <item>Blades,7.0,6.0,7.0,5.0,5.0,9.0,7.0,7.0,Blades</item>
+        <item>Blaster,8.0,8.0,2.0,8.0,7.0,9.0,7.0,9.0,Blaster</item>
+        <item>Bluestreak,6.0,6.0,7.0,9.0,5.0,2.0,9.0,7.0,Bluestreak</item>
+        <item>Blurr,7.0,8.0,10.0,6.0,7.0,8.0,7.0,5.0,Blurr</item>
+        <item>Brainstorm,5.0,8.0,9.0,6.0,7.0,9.0,7.0,8.0,Brainstorm</item>
+        <item>Brawn,9.0,3.0,4.0,9.0,5.0,10.0,1.0,4.0,Brawn</item>
+        <item>Broadside,8.0,8.0,9.0,8.0,6.0,9.0,7.0,7.0,Broadside</item>
+        <item>Bumblebee,2.0,8.0,4.0,7.0,7.0,10.0,1.0,7.0,Bumblebee</item>
+        <item>Chase,4.0,6.0,6.0,4.0,6.0,9.0,1.0,8.0,Chase</item>
+        <item>Chromedome,6.0,9.0,6.0,6.0,7.0,6.0,7.0,9.0,Chromedome</item>
+        <item>Cliffjumper,4.0,4.0,7.0,4.0,5.0,10.0,7.0,5.0,Cliffjumper</item>
+        <item>Cloudraker,6.0,6.0,8.0,6.0,5.0,7.0,6.0,6.0,Cloudraker</item>
+        <item>Computron,9.0,10.0,2.0,8.0,7.0,10.0,7.0,9.0,Computron</item>
+        <item>Cosmos,2.0,8.0,10.0,6.0,6.0,7.0,6.0,9.0,Cosmos</item>
+        <item>Crosshairs,6.0,8.0,4.0,8.0,6.0,8.0,7.0,9.0,Crosshairs</item>
+        <item>Defensor,10.0,7.0,2.0,9.0,6.0,10.0,8.0,8.0,Defensor</item>
+        <item>Doublecross,1.0,6.0,2.0,10.0,6.0,9.0,6.0,7.0,Doublecross</item>
+        <item>Eject,6.0,6.0,2.0,6.0,6.0,8.0,5.0,8.0,Eject</item>
+        <item>Fastlane,6.0,3.0,6.0,6.0,5.0,9.0,7.0,7.0,Fastlane</item>
+        <item>Fireflight,7.0,5.0,8.0,8.0,6.0,9.0,7.0,3.0,Fireflight</item>
+        <item>First Aid,4.0,9.0,4.0,6.0,6.0,7.0,6.0,9.0,First_Aid</item>
+        <item>Fortress Maximus,10.0,10.0,10.0,9.0,10.0,10.0,10.0,9.0,Fortress_Maximus</item>
+        <item>Freeway,3.0,6.0,4.0,6.0,6.0,8.0,3.0,9.0,Freeway</item>
+        <item>Gears,8.0,7.0,6.0,8.0,6.0,9.0,1.0,7.0,Gears</item>
+        <item>Goldbug,9.0,8.0,4.0,8.0,8.0,10.0,1.0,7.0,Goldbug</item>
+        <item>Grapple,8.0,8.0,3.0,4.0,7.0,7.0,7.0,9.0,Grapple</item>
+        <item>Grimlock,10.0,7.0,3.0,10.0,9.0,10.0,8.0,10.0,Grimlock</item>
+        <item>Groove,4.0,9.0,5.0,7.0,6.0,8.0,6.0,8.0,Groove</item>
+        <item>Grotusque,7.0,10.0,4.0,6.0,8.0,10.0,7.0,10.0,Grotusque</item>
+        <item>Hardhead,10.0,6.0,5.0,9.0,5.0,10.0,8.0,6.0,Hardhead</item>
+        <item>Highbrow,7.0,7.0,7.0,6.0,6.0,6.0,6.0,10.0,Highbrow</item>
+        <item>Hoist,8.0,6.0,3.0,7.0,4.0,8.0,6.0,9.0,Hoist</item>
+        <item>Hot Rod,10.0,10.0,9.0,10.0,10.0,7.0,10.0,10.0,Hot_Rod</item>
+        <item>Hot Spot,9.0,7.0,4.0,9.0,7.0,9.0,7.0,6.0,Hot_Spot</item>
+        <item>Hound,5.0,8.0,5.0,7.0,6.0,10.0,3.0,9.0,Hound</item>
+        <item>Hubcap,3.0,9.0,4.0,3.0,6.0,8.0,1.0,9.0,Hubcap</item>
+        <item>Huffer,7.0,8.0,5.0,7.0,6.0,8.0,1.0,9.0,Huffer</item>
+        <item>Inferno,9.0,6.0,4.0,8.0,5.0,9.0,6.0,6.0,Inferno</item>
+        <item>Ironhide,7.0,7.0,3.0,9.0,7.0,10.0,7.0,7.0,Ironhide</item>
+        <item>Jazz,5.0,9.0,7.0,7.0,8.0,9.0,5.0,10.0,Jazz</item>
+        <item>Jetfire,6.0,10.0,10.0,4.0,10.0,9.0,7.0,9.0,Jetfire</item>
+        <item>Kup,9.0,7.0,6.0,9.0,8.0,9.0,6.0,8.0,Kup</item>
+        <item>Lightspeed,6.0,8.0,5.0,6.0,6.0,8.0,7.0,8.0,Lightspeed</item>
+        <item>Metroplex,10.0,8.0,2.0,9.0,8.0,10.0,10.0,9.0,Metroplex</item>
+        <item>Mirage,6.0,9.0,7.0,5.0,7.0,5.0,6.0,10.0,Mirage</item>
+        <item>Nosecone,7.0,6.0,3.0,9.0,5.0,8.0,7.0,7.0,Nosecone</item>
+        <item>Omega Supreme,10.0,5.0,3.0,10.0,7.0,10.0,10.0,6.0,Omega_Supreme</item>
+        <item>Optimus Prime,10.0,10.0,8.0,10.0,10.0,10.0,8.0,10.0,Optimus_Prime</item>
+        <item>Outback,4.0,5.0,6.0,5.0,4.0,9.0,6.0,5.5,Outback</item>
+        <item>Perceptor,7.0,10.0,2.0,7.0,7.0,8.0,8.0,10.0,Perceptor</item>
+        <item>Pipes,9.0,6.0,4.0,8.0,5.0,8.0,5.0,4.0,Pipes</item>
+        <item>Pointblank,7.0,7.0,4.0,7.0,8.0,10.0,6.0,8.0,Pointblank</item>
+        <item>Powerglide,3.0,7.0,8.0,7.0,5.0,8.0,6.0,9.0,Powerglide</item>
+        <item>Prowl,7.0,9.0,7.0,9.0,9.0,9.0,4.0,9.0,Prowl</item>
+        <item>Punch/Counterpunch,6.0,9.0,4.0,6.0,7.0,10.0,6.0,9.0,Punch_Counterpunch</item>
+        <item>Ramhorn,8.0,4.0,3.0,9.0,5.0,9.0,3.0,4.0,Ramhorn</item>
+        <item>Ratchet,4.0,8.0,4.0,5.0,7.0,8.0,3.0,10.0,Ratchet</item>
+        <item>Red Alert,5.0,7.0,3.0,5.0,7.0,7.0,7.0,8.0,Red_Alert</item>
+        <item>Repugnus,5.0,9.0,2.0,9.0,6.0,10.0,2.0,10.0,Repugnus</item>
+        <item>Rewind,4.0,9.0,2.0,7.0,6.0,7.0,4.0,8.0,Rewind</item>
+        <item>Roadbuster,8.0,7.0,5.0,9.0,8.0,10.0,6.0,7.0,Roadbuster</item>
+        <item>Rodimus Prime,10.0,10.0,9.0,10.0,10.0,10.0,9.0,10.0,Rodimus_Prime</item>
+        <item>Rollbar,5.0,7.0,4.0,7.0,6.0,10.0,1.0,9.0,Rollbar</item>
+        <item>Sandstorm,7.0,9.0,6.0,7.0,6.0,10.0,6.0,9.0,Sandstorm</item>
+        <item>Scattershot,8.0,7.0,7.0,8.0,8.0,9.0,8.0,6.0,Scattershot</item>
+        <item>Searchlight,3.0,7.0,5.0,8.0,6.0,4.0,1.0,9.0,Searchlight</item>
+        <item>Seaspray,3.0,8.0,6.0,6.0,6.0,10.0,6.0,7.0,Seaspray</item>
+        <item>Sideswipe,7.0,7.0,7.0,7.0,5.0,10.0,3.0,6.0,Sideswipe</item>
+        <item>Silverbolt,6.0,8.0,9.0,8.0,8.0,8.0,8.0,5.0,Silverbolt</item>
+        <item>Siren,6.0,7.0,6.0,7.0,7.0,9.0,6.0,6.0,Siren</item>
+        <item>Skids,4.0,9.0,5.0,6.0,8.0,7.0,7.0,7.0,Skids</item>
+        <item>Skydive,4.0,10.0,9.0,4.0,7.0,7.0,8.0,10.0,Skydive</item>
+        <item>Sky Lynx,10.0,8.0,10.0,10.0,9.0,10.0,7.0,8.0,Sky_Lynx</item>
+        <item>Slag,9.0,4.0,3.0,9.0,4.0,7.0,8.0,7.0,Slag</item>
+        <item>Slingshot,6.0,6.0,8.0,4.0,5.0,8.0,8.0,9.0,Slingshot</item>
+        <item>Sludge,9.0,3.0,2.0,10.0,4.0,9.0,1.0,5.0,Sludge</item>
+        <item>Smokescreen,4.0,9.0,7.0,6.0,6.0,8.0,7.0,9.0,Smokescreen</item>
+        <item>Snarl,9.0,6.0,3.0,9.0,4.0,8.0,1.0,4.0,Snarl</item>
+        <item>Springer,10.0,8.0,8.0,10.0,7.0,9.0,7.0,7.0,Springer</item>
+        <item>Steeljaw,8.0,8.0,2.0,9.0,6.0,9.0,1.0,9.0,Steeljaw</item>
+        <item>Strafe,5.0,6.0,6.0,7.0,5.0,8.0,7.0,4.0,Strafe</item>
+        <item>Streetwise,5.0,9.0,6.0,6.0,5.0,9.0,7.0,7.0,Streetwise</item>
+        <item>Sunstreaker,5.0,6.0,7.0,8.0,5.0,7.0,7.0,6.0,Sunstreaker</item>
+        <item>Superion,10.0,3.0,8.0,10.0,5.0,10.0,8.0,7.0,Superion</item>
+        <item>Sureshot,6.0,7.0,6.0,7.0,6.0,8.0,7.0,10.0,Sureshot</item>
+        <item>Swerve,6.0,8.0,5.0,8.0,5.0,6.0,1.0,7.0,Swerve</item>
+        <item>Swoop,6.0,6.0,8.0,9.0,5.0,7.0,7.0,7.0,Swoop</item>
+        <item>Tailgate,5.0,5.0,6.0,6.0,6.0,7.0,2.0,7.0,Tailgate</item>
+        <item>Topspin,6.0,6.0,8.0,5.0,6.0,10.0,9.0,8.0,Topspin</item>
+        <item>Tracks,6.0,6.0,7.0,8.0,5.0,6.0,8.0,8.0,Tracks</item>
+        <item>Trailbreaker,7.0,6.0,4.0,10.0,7.0,9.0,3.0,7.0,Trailbreaker</item>
+        <item>Twin Twist,8.0,4.0,7.0,7.0,5.0,9.0,7.0,6.0,Twin_Twist</item>
+        <item>Ultra Magnus,9.0,9.0,6.0,8.0,8.0,9.0,6.0,8.0,Ultra_Magnus</item>
+        <item>Warpath,9.0,5.0,2.0,8.0,5.0,9.0,7.0,10.0,Warpath</item>
+        <item>Wheelie,5.0,6.0,8.0,9.0,5.0,9.0,7.0,8.0,Wheelie</item>
+        <item>Wheeljack,7.0,9.0,7.0,5.0,8.0,9.0,7.0,10.0,Wheeljack</item>
+        <item>Whirl,8.0,8.0,8.0,8.0,6.0,9.0,8.0,8.0,Whirl</item>
+        <item>Wideload,9.0,4.0,2.0,9.0,5.0,7.0,1.0,5.0,Wideload</item>
+        <item>Windcharger,4.0,6.0,8.0,4.0,5.0,9.0,7.0,6.0,Windcharger</item>
+        <item>Wreck-Gar,8.0,7.0,6.0,10.0,7.0,9.0,7.0,7.0,Wreck-Gar</item>
+    </string-array>
+
+    <string-array name="decepticonStats">
+        <item>Abominus,10.0,1.0,3.0,10.0,5.0,10.0,8.0,4.0,Abominus</item>
+        <item>Apeface,10.0,9.0,9.0,8.0,6.0,7.0,7.0,7.0,Apeface</item>
+        <item>Astrotrain,9.0,7.0,10.0,7.0,6.0,7.0,6.0,8.0,Astrotrain</item>
+        <item>Barrage,3.0,8.0,3.0,7.0,5.0,10.0,9.0,8.0,Barrage</item>
+        <item>Battletrap,7.0,3.0,6.0,8.0,6.0,6.0,7.0,7.0,Battletrap</item>
+        <item>Blast Off,3.0,8.0,10.0,3.0,5.0,5.0,9.0,10.0,Blast_Off</item>
+        <item>Blitzwing,8.0,5.0,9.0,8.0,6.0,7.0,7.0,7.0,Blitzwing</item>
+        <item>Blot,9.0,2.0,2.0,10.0,4.0,10.0,6.0,5.0,Blot</item>
+        <item>Bombshell,5.0,8.0,4.0,5.0,6.0,5.0,6.0,9.0,Bombshell</item>
+        <item>Bonecrusher,9.0,3.0,2.0,9.0,4.0,8.0,6.0,6.0,Bonecrusher</item>
+        <item>Brawl,8.0,2.0,4.0,9.0,5.0,9.0,8.0,7.0,Brawl</item>
+        <item>Breakdown,6.0,7.0,7.0,5.0,6.0,8.0,6.0,6.0,Breakdown</item>
+        <item>Bruticus,10.0,3.0,1.0,9.0,5.0,10.0,8.0,6.0,Bruticus</item>
+        <item>Buzzsaw,5.0,8.0,8.0,4.0,6.0,7.0,4.0,9.0,Buzzsaw</item>
+        <item>Chop Shop,7.0,8.0,4.0,5.0,6.0,7.0,6.0,10.0,Chop_Shop</item>
+        <item>Punch/Counterpunch,6.0,9.0,4.0,6.0,7.0,10.0,6.0,9.0,Punch_Counterpunch</item>
+        <item>Cutthroat,8.0,4.0,4.0,9.0,5.0,8.0,7.0,7.0,Cutthroat</item>
+        <item>Cyclonus,8.0,8.0,9.0,8.0,9.0,9.0,8.0,8.0,Cyclonus</item>
+        <item>Dead End,7.0,6.0,7.0,7.0,5.0,9.0,5.0,7.0,Dead_End</item>
+        <item>Devastator,10.0,2.0,1.0,9.0,6.0,10.0,8.0,4.0,Devastator</item>
+        <item>Dirge,7.0,8.0,8.0,6.0,5.0,4.0,8.0,9.0,Dirge</item>
+        <item>Divebomb,7.0,8.0,6.0,7.0,6.0,8.0,7.0,7.0,Divebomb</item>
+        <item>Drag Strip,6.0,7.0,7.0,4.0,5.0,8.0,7.0,6.0,Drag_Strip</item>
+        <item>Fangry,6.0,8.0,6.0,8.0,6.0,8.0,6.0,8.0,Fangry</item>
+        <item>Flywheels,7.0,4.0,7.0,7.0,6.0,8.0,8.0,6.0,Flywheels</item>
+        <item>Frenzy,3.0,5.0,3.0,6.0,5.0,10.0,9.0,6.0,Frenzy</item>
+        <item>Galvatron,10.0,9.0,9.0,10.0,9.0,9.0,9.0,10.0,Galvatron</item>
+        <item>Gnaw,7.0,3.0,4.0,8.0,2.0,8.0,5.0,5.0,Gnaw</item>
+        <item>Headstrong,7.0,5.0,4.0,7.0,5.0,6.0,8.0,6.0,Headstrong</item>
+        <item>Hook,8.0,9.0,3.0,6.0,4.0,6.0,5.0,10.0,Hook</item>
+        <item>Hun-Grrr,9.0,8.0,3.0,10.0,9.0,10.0,9.0,6.0,Hun-Grrr</item>
+        <item>Kickback,3.0,9.0,4.0,4.0,7.0,6.0,5.0,8.0,Kickback</item>
+        <item>Laserbeak,5.0,6.0,8.0,5.0,6.0,2.0,8.0,9.0,Laserbeak</item>
+        <item>Long Haul,9.0,5.0,2.0,9.0,4.0,8.0,7.0,4.0,Long_Haul</item>
+        <item>Megatron,10.0,10.0,4.0,8.0,10.0,9.0,10.0,9.0,Megatron</item>
+        <item>Menasor,10.0,3.0,2.0,9.0,5.0,9.0,9.0,6.0,Menasor</item>
+        <item>Mindwipe,8.0,6.0,7.0,5.0,7.0,8.0,7.0,9.0,Mindwipe</item>
+        <item>Misfire,7.0,8.0,7.0,9.0,6.0,4.0,7.0,2.0,Misfire</item>
+        <item>Mixmaster,7.0,6.0,3.0,8.0,4.0,6.0,7.0,9.0,Mixmaster</item>
+        <item>Motormaster,9.0,6.0,5.0,10.0,7.0,9.0,7.0,4.0,Motormaster</item>
+        <item>Octane,6.0,6.0,7.0,4.0,7.0,3.0,4.0,7.0,Octane</item>
+        <item>Onslaught,8.0,8.0,3.0,7.0,7.0,8.0,8.0,9.0,Onslaught</item>
+        <item>Overkill,8.0,5.0,2.0,8.0,5.0,6.0,5.5,5.0,Overkill</item>
+        <item>Pounce,5.0,7.0,4.0,5.0,6.0,8.0,7.0,10.0,Pounce</item>
+        <item>Predaking,10.0,5.0,2.5,8.0,7.0,9.0,9.0,8.0,Predaking</item>
+        <item>Ramjet,8.0,5.0,9.0,9.0,5.0,8.0,7.0,6.0,Ramjet</item>
+        <item>Rampage,8.0,3.0,5.0,6.0,5.0,8.0,9.0,6.0,Rampage</item>
+        <item>Ransack,8.0,5.0,3.0,8.0,5.0,9.0,9.0,5.0,Ransack</item>
+        <item>Ratbat,3.0,9.0,4.0,3.0,6.0,7.0,2.0,9.0,Ratbat</item>
+        <item>Ravage,5.0,8.0,5.0,6.0,7.0,4.0,7.0,10.0,Ravage</item>
+        <item>Razorclaw,8.0,9.0,4.0,9.0,8.0,10.0,7.0,7.0,Razorclaw</item>
+        <item>Reflector,7.0,8.0,2.0,6.0,6.0,7.0,6.0,9.0,Reflector</item>
+        <item>Rippersnapper,3.0,5.0,5.0,9.0,6.0,8.0,8.0,6.0,Rippersnapper</item>
+        <item>Rumble,2.0,5.0,2.0,9.0,5.0,7.0,9.0,5.0,Rumble</item>
+        <item>Runabout,5.0,6.0,7.0,7.0,6.0,7.0,7.0,7.0,Runabout</item>
+        <item>Runamuck,6.0,6.0,7.0,7.0,6.0,5.0,7.0,8.0,Runamuck</item>
+        <item>Scavenger,7.0,2.0,3.0,6.0,4.0,9.0,6.0,7.0,Scavenger</item>
+        <item>Scorponok,10.0,9.0,4.0,10.0,10.0,10.0,9.0,9.0,Scorponok</item>
+        <item>Scourge,8.0,8.0,9.0,8.0,9.0,9.0,8.0,8.0,Scourge</item>
+        <item>Scrapper,8.0,8.0,4.0,7.0,5.0,5.0,3.0,9.0,Scrapper</item>
+        <item>Shockwave,9.0,10.0,7.0,7.0,9.0,9.0,9.0,9.0,Shockwave</item>
+        <item>Shrapnel,9.0,6.0,4.0,7.0,6.0,6.0,8.0,9.0,Shrapnel</item>
+        <item>Sinnertwin,8.0,6.0,3.0,9.0,5.0,5.0,6.0,7.0,Sinnertwin</item>
+        <item>Sixshot,10.0,9.0,4.0,9.0,7.0,8.0,9.0,8.0,Sixshot</item>
+        <item>Skullcruncher,10.0,8.0,3.0,10.0,5.0,9.0,5.0,6.0,Skullcruncher</item>
+        <item>Skywarp,7.0,9.0,10.0,7.0,9.0,9.0,8.0,8.0,Skywarp</item>
+        <item>Slugfest,9.0,2.0,1.0,8.0,4.0,8.0,5.0,4.0,Slugfest</item>
+        <item>Slugslinger,6.0,8.0,8.0,7.0,6.0,3.0,8.0,9.0,Slugslinger</item>
+        <item>Snapdragon,10.0,9.0,9.0,8.0,6.0,7.0,7.0,7.0,Snapdragon</item>
+        <item>Soundwave,8.0,9.0,2.0,6.0,8.0,5.0,6.0,10.0,Soundwave</item>
+        <item>Starscream,7.0,7.0,9.0,7.0,5.0,8.0,7.0,7.0,Starscream</item>
+        <item>Swindle,5.0,9.0,5.0,6.0,6.0,5.0,7.0,10.0,Swindle</item>
+        <item>Tantrum,8.0,4.0,3.0,9.0,5.0,9.0,8.0,7.0,Tantrum</item>
+        <item>Thrust,8.0,6.0,9.0,6.0,5.0,4.0,8.0,7.0,Thrust</item>
+        <item>Thundercracker,7.0,4.0,9.0,7.0,5.0,8.0,7.0,7.0,Thundercracker</item>
+        <item>Triggerhappy,7.0,7.0,7.0,7.0,5.0,9.0,8.0,6.0,Triggerhappy</item>
+        <item>Trypticon,10.0,7.0,8.0,10.0,9.0,10.0,10.0,8.0,Trypticon</item>
+        <item>Venom,3.0,9.0,3.0,6.0,8.0,9.0,8.0,8.0,Venom</item>
+        <item>Vortex,4.0,9.0,6.0,5.0,6.0,7.0,7.0,8.0,Vortex</item>
+        <item>Weirdwolf,6.0,10.0,6.0,10.0,6.0,9.0,5.0,6.0,Weirdwolf</item>
+        <item>Wildrider,6.0,6.0,7.0,6.0,5.0,8.0,7.0,6.0,Wildrider</item>
+        <item>Wingspan,5.0,9.0,6.0,5.0,6.0,7.0,7.0,9.0,Wingspan</item>
+    </string-array>
 </resources>
