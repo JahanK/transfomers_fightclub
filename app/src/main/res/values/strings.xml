@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Transfomers Fightclub</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="app_name">Transfomers Fight Club</string>
+    <string name="tab_text_1">Autobots</string>
+    <string name="tab_text_2">Decepticons</string>
 </resources>
