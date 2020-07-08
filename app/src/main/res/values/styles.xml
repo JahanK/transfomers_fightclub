@@ -1,10 +1,55 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="TitleAppearanceExpanded" parent="TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="android:textSize">50dp</item>
+        <item name="android:textColor">@color/colorTransparent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TitleAppearanceCollapsed" parent="TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="FabAppearance" parent="AppTheme">
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ListItemTransformerTextAppearance" parent="AppTheme">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+
+    <style name="ListItemTransformerNameAppearance" parent="AppTheme">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">1</item>
+
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

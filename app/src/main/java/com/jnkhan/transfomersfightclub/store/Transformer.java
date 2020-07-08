@@ -2,6 +2,8 @@ package com.jnkhan.transfomersfightclub.store;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Comparator;
+
 public class Transformer {
 
     @SerializedName("id")
@@ -137,6 +139,10 @@ public class Transformer {
 
     public void setTeamIcon(String teamIcon) {
         this.teamIcon = teamIcon;
+    }
+
+    public int getRating() {
+        return strength+intelligence+speed+endurance+firepower;
     }
 
 }

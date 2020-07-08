@@ -1,7 +1,24 @@
 <resources>
     <string name="app_name">Transfomers Fight Club</string>
+    <string name="title">Transfomers</string>
+    <string name="sub_title">Fight Club</string>
+    <string name="menu_item_battle">Start Battle</string>
+    <string name="snackbar_empty">Add some transformers first</string>
 
-    <string-array name="autobotStats">
+    <string name="listitem_strength">ST</string>
+    <string name="listitem_intelligence">IN</string>
+    <string name="listitem_speed">SP</string>
+    <string name="listitem_endurance">EN</string>
+    <string name="listitem_rank">RK</string>
+    <string name="listitem_courage">CG</string>
+    <string name="listitem_firepower">FP</string>
+    <string name="listitem_skill">SK</string>
+
+    <string name="listItem_rating">RATING</string>
+
+    <string name="url_image_hero">https://i.pinimg.com/originals/fc/1c/f6/fc1cf6acc84ad1dc76c62be24e19409f.jpg</string>
+
+    <string-array name="autobot_stats">
         <item>Afterburner,7.0,6.0,6.0,6.0,5.0,9.0,7.0,7.0,Afterburner</item>
         <item>Air Raid,5.0,7.0,9.0,7.0,5.0,10.0,8.0,7.0,Air_Raid</item>
         <item>Beachcomber,3.0,9.0,5.0,9.0,6.0,6.0,1.0,10.0,Beachcomber</item>
@@ -107,7 +124,7 @@
         <item>Wreck-Gar,8.0,7.0,6.0,10.0,7.0,9.0,7.0,7.0,Wreck-Gar</item>
     </string-array>
 
-    <string-array name="decepticonStats">
+    <string-array name="decepticon_stats">
         <item>Abominus,10.0,1.0,3.0,10.0,5.0,10.0,8.0,4.0,Abominus</item>
         <item>Apeface,10.0,9.0,9.0,8.0,6.0,7.0,7.0,7.0,Apeface</item>
         <item>Astrotrain,9.0,7.0,10.0,7.0,6.0,7.0,6.0,8.0,Astrotrain</item>
@@ -191,4 +208,7 @@
         <item>Wildrider,6.0,6.0,7.0,6.0,5.0,8.0,7.0,6.0,Wildrider</item>
         <item>Wingspan,5.0,9.0,6.0,5.0,6.0,7.0,7.0,9.0,Wingspan</item>
     </string-array>
+    <string name="title_activity_selection">SelectionActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>
