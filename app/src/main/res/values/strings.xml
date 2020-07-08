@@ -18,7 +18,11 @@
 
     <string name="url_image_hero">https://i.pinimg.com/originals/fc/1c/f6/fc1cf6acc84ad1dc76c62be24e19409f.jpg</string>
 
-    <string-array name="autobot_stats">
+    <string name="title_activity_selection">Select a Transformer</string>
+    <string name="tab_text_1">Autobots</string>
+    <string name="tab_text_2">Decepticons</string>
+
+    <string-array name="stats_autobots">
         <item>Afterburner,7.0,6.0,6.0,6.0,5.0,9.0,7.0,7.0,Afterburner</item>
         <item>Air Raid,5.0,7.0,9.0,7.0,5.0,10.0,8.0,7.0,Air_Raid</item>
         <item>Beachcomber,3.0,9.0,5.0,9.0,6.0,6.0,1.0,10.0,Beachcomber</item>
@@ -124,7 +128,7 @@
         <item>Wreck-Gar,8.0,7.0,6.0,10.0,7.0,9.0,7.0,7.0,Wreck-Gar</item>
     </string-array>
 
-    <string-array name="decepticon_stats">
+    <string-array name="stats_decepticons">
         <item>Abominus,10.0,1.0,3.0,10.0,5.0,10.0,8.0,4.0,Abominus</item>
         <item>Apeface,10.0,9.0,9.0,8.0,6.0,7.0,7.0,7.0,Apeface</item>
         <item>Astrotrain,9.0,7.0,10.0,7.0,6.0,7.0,6.0,8.0,Astrotrain</item>
@@ -208,7 +212,5 @@
         <item>Wildrider,6.0,6.0,7.0,6.0,5.0,8.0,7.0,6.0,Wildrider</item>
         <item>Wingspan,5.0,9.0,6.0,5.0,6.0,7.0,7.0,9.0,Wingspan</item>
     </string-array>
-    <string name="title_activity_selection">SelectionActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+
 </resources>
