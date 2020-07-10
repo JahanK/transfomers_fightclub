@@ -1,5 +1,6 @@
 package com.jnkhan.transfomersfightclub.store;
 
+import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Comparator;
@@ -54,7 +55,7 @@ public class Transformer {
     }
 
     public String getName() {
-        return name;
+        return name.replace("_"," ");
     }
 
     public void setName(String name) {
@@ -143,6 +144,10 @@ public class Transformer {
 
     public int getRating() {
         return strength+intelligence+speed+endurance+firepower;
+    }
+
+    public String getImageUrl() {
+        return "https://www.ntfa.net/ntfa/techspecs/g1specs/"+name+".jpg";
     }
 
 }

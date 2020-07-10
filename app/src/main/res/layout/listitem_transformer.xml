@@ -1,129 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/listitem_transformer"
+
+<com.google.android.material.card.MaterialCardView android:id="@+id/listitem_transformer"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="@dimen/listitem_transformer_width"
-    android:layout_height="@dimen/listitem_transformer_height"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:layout_margin="30dp"
+    app:cardCornerRadius="10dp"
+    android:elevation="4dp"
     >
 
-    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/listitem_transformer_image"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        app:layout_constraintHorizontal_weight="3"
-        android:alpha="230"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/listitem_transformer_name"
-        />
-
-    <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_name"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintHorizontal_weight="5"
-        app:layout_constraintVertical_weight="6"
-        style="@style/ListItemTransformerNameAppearance"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/listitem_transformer_row1"
-        app:layout_constraintStart_toEndOf="@id/listitem_transformer_image"
-        app:layout_constraintEnd_toStartOf="@id/listitem_transformer_recycle"
-        />
-
-    <androidx.appcompat.widget.LinearLayoutCompat android:id="@+id/listitem_transformer_row1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintVertical_weight="5"
-        android:orientation="horizontal"
-
-        app:layout_constraintTop_toBottomOf="@id/listitem_transformer_name"
-        app:layout_constraintBottom_toTopOf="@id/listitem_transformer_row2"
-        app:layout_constraintStart_toEndOf="@id/listitem_transformer_image"
-        app:layout_constraintEnd_toStartOf="@id/listitem_transformer_recycle"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/listitem_transformer_width"
+        android:layout_height="@dimen/listitem_transformer_height"
+        android:layout_gravity="center"
         >
 
-        <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_strength"
+        <FrameLayout android:id="@+id/listitem_transformer_image_container"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/ListItemTransformerTextAppearance"
+            app:layout_constraintHorizontal_weight="3"
+            android:background="@color/colorWhite"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/listitem_transformer_name" >
+
+            <ImageView android:id="@+id/listitem_transformer_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                />
+
+        </FrameLayout>
+
+        <ImageView android:id="@+id/listitem_transformer_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintHorizontal_weight="3"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             />
 
-        <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_intelligence"
+        <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHorizontal_weight="5"
+            app:layout_constraintVertical_weight="4"
+            style="@style/ListItemTransformerNameAppearance"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/listitem_transformer_rating"
+            app:layout_constraintStart_toEndOf="@id/listitem_transformer_image_container"
+            app:layout_constraintEnd_toStartOf="@id/listitem_transformer_recycle"
+            />
+
+        <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_rating"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintVertical_weight="2"
+            style="@style/ListItemTransformerTextAppearance"
+            android:gravity="top|center_horizontal"
+
+            app:layout_constraintTop_toBottomOf="@id/listitem_transformer_name"
+            app:layout_constraintBottom_toTopOf="@+id/listitem_transformer_row1"
+            app:layout_constraintStart_toStartOf="@id/listitem_transformer_name"
+            app:layout_constraintEnd_toEndOf="@id/listitem_transformer_name"
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat android:id="@+id/listitem_transformer_row1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintVertical_weight="5"
+            android:orientation="horizontal"
+
+            app:layout_constraintTop_toBottomOf="@id/listitem_transformer_rating"
+            app:layout_constraintBottom_toTopOf="@id/listitem_transformer_row2"
+            app:layout_constraintStart_toEndOf="@id/listitem_transformer_image_container"
+            app:layout_constraintEnd_toStartOf="@id/listitem_transformer_recycle"
+            >
+
+            <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_strength"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/ListItemTransformerTextAppearance"
+                />
+
+            <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_intelligence"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/ListItemTransformerTextAppearance"
+                />
+
+            <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_speed"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/ListItemTransformerTextAppearance"
+                />
+
+            <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_endurance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/ListItemTransformerTextAppearance"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat android:id="@+id/listitem_transformer_row2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintVertical_weight="5"
+            android:orientation="horizontal"
+
+            app:layout_constraintTop_toBottomOf="@id/listitem_transformer_row1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/listitem_transformer_image_container"
+            app:layout_constraintEnd_toStartOf="@id/listitem_transformer_recycle"
+            >
+
+            <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_rank"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/ListItemTransformerTextAppearance"
+                />
+
+            <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_courage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/ListItemTransformerTextAppearance"
+                />
+
+            <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_firepower"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/ListItemTransformerTextAppearance"
+                />
+
+            <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_skill"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/ListItemTransformerTextAppearance"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ImageButton android:id="@+id/listitem_transformer_recycle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/ListItemTransformerTextAppearance"
+            app:layout_constraintHorizontal_weight="1"
+
+            android:src="@drawable/svg_delete"
+
+            app:layout_constraintStart_toEndOf="@id/listitem_transformer_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             />
 
-        <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_speed"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/ListItemTransformerTextAppearance"
-            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_endurance"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/ListItemTransformerTextAppearance"
-            />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat android:id="@+id/listitem_transformer_row2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintVertical_weight="5"
-        android:orientation="horizontal"
-
-        app:layout_constraintTop_toBottomOf="@id/listitem_transformer_row1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/listitem_transformer_image"
-        app:layout_constraintEnd_toStartOf="@id/listitem_transformer_recycle"
-        >
-
-        <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_rank"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/ListItemTransformerTextAppearance"
-            />
-
-        <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_courage"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/ListItemTransformerTextAppearance"
-            />
-
-        <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_firepower"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/ListItemTransformerTextAppearance"
-            />
-
-        <com.google.android.material.textview.MaterialTextView android:id="@+id/listitem_transformer_skill"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/ListItemTransformerTextAppearance"
-            />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.AppCompatImageButton android:id="@+id/listitem_transformer_recycle"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        app:layout_constraintHorizontal_weight="1"
-
-        android:src="@drawable/svg_delete"
-
-        app:layout_constraintStart_toEndOf="@id/listitem_transformer_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

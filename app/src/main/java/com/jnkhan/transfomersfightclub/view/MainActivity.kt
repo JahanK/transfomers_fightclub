@@ -1,5 +1,6 @@
 package com.jnkhan.transfomersfightclub.view
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
@@ -29,9 +30,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         val fabAdd: FloatingActionButton = findViewById(R.id.fab_add)
-        fabAdd.setOnClickListener { kotlin.run {
-            appBar.setExpanded(false)
+        fabAdd.setOnClickListener {
+            kotlin.run {
+                appBar.setExpanded(false)
+
+                val intent = Intent(this, SelectionActivity::class.java)
+                startActivity(intent)
+            }
         }
-        }
+
+
     }
 }

@@ -14,8 +14,7 @@
 
         <activity
             android:name=".view.SelectionActivity"
-            android:label="@string/title_activity_selection"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/activity_selection_title" />
 
         <activity
             android:name=".view.MainActivity"

@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Transfomers Fight Club</string>
-    <string name="title">Transfomers</string>
-    <string name="sub_title">Fight Club</string>
     <string name="menu_item_battle">Start Battle</string>
     <string name="snackbar_empty">Add some transformers first</string>
 
@@ -18,199 +16,200 @@
 
     <string name="url_image_hero">https://i.pinimg.com/originals/fc/1c/f6/fc1cf6acc84ad1dc76c62be24e19409f.jpg</string>
 
-    <string name="title_activity_selection">Select a Transformer</string>
-    <string name="tab_text_1">Autobots</string>
-    <string name="tab_text_2">Decepticons</string>
+    <string name="activity_selection_title">Fighter Selection</string>
+    <string name="activity_selection_subtitle">Select a transformer</string>
+    <string name="team_text_1">Autobots</string>
+    <string name="team_text_2">Decepticons</string>
 
     <string-array name="stats_autobots">
-        <item>Afterburner,7.0,6.0,6.0,6.0,5.0,9.0,7.0,7.0,Afterburner</item>
-        <item>Air Raid,5.0,7.0,9.0,7.0,5.0,10.0,8.0,7.0,Air_Raid</item>
-        <item>Beachcomber,3.0,9.0,5.0,9.0,6.0,6.0,1.0,10.0,Beachcomber</item>
-        <item>Blades,7.0,6.0,7.0,5.0,5.0,9.0,7.0,7.0,Blades</item>
-        <item>Blaster,8.0,8.0,2.0,8.0,7.0,9.0,7.0,9.0,Blaster</item>
-        <item>Bluestreak,6.0,6.0,7.0,9.0,5.0,2.0,9.0,7.0,Bluestreak</item>
-        <item>Blurr,7.0,8.0,10.0,6.0,7.0,8.0,7.0,5.0,Blurr</item>
-        <item>Brainstorm,5.0,8.0,9.0,6.0,7.0,9.0,7.0,8.0,Brainstorm</item>
-        <item>Brawn,9.0,3.0,4.0,9.0,5.0,10.0,1.0,4.0,Brawn</item>
-        <item>Broadside,8.0,8.0,9.0,8.0,6.0,9.0,7.0,7.0,Broadside</item>
-        <item>Bumblebee,2.0,8.0,4.0,7.0,7.0,10.0,1.0,7.0,Bumblebee</item>
-        <item>Chase,4.0,6.0,6.0,4.0,6.0,9.0,1.0,8.0,Chase</item>
-        <item>Chromedome,6.0,9.0,6.0,6.0,7.0,6.0,7.0,9.0,Chromedome</item>
-        <item>Cliffjumper,4.0,4.0,7.0,4.0,5.0,10.0,7.0,5.0,Cliffjumper</item>
-        <item>Cloudraker,6.0,6.0,8.0,6.0,5.0,7.0,6.0,6.0,Cloudraker</item>
-        <item>Computron,9.0,10.0,2.0,8.0,7.0,10.0,7.0,9.0,Computron</item>
-        <item>Cosmos,2.0,8.0,10.0,6.0,6.0,7.0,6.0,9.0,Cosmos</item>
-        <item>Crosshairs,6.0,8.0,4.0,8.0,6.0,8.0,7.0,9.0,Crosshairs</item>
-        <item>Defensor,10.0,7.0,2.0,9.0,6.0,10.0,8.0,8.0,Defensor</item>
-        <item>Doublecross,1.0,6.0,2.0,10.0,6.0,9.0,6.0,7.0,Doublecross</item>
-        <item>Eject,6.0,6.0,2.0,6.0,6.0,8.0,5.0,8.0,Eject</item>
-        <item>Fastlane,6.0,3.0,6.0,6.0,5.0,9.0,7.0,7.0,Fastlane</item>
-        <item>Fireflight,7.0,5.0,8.0,8.0,6.0,9.0,7.0,3.0,Fireflight</item>
-        <item>First Aid,4.0,9.0,4.0,6.0,6.0,7.0,6.0,9.0,First_Aid</item>
-        <item>Fortress Maximus,10.0,10.0,10.0,9.0,10.0,10.0,10.0,9.0,Fortress_Maximus</item>
-        <item>Freeway,3.0,6.0,4.0,6.0,6.0,8.0,3.0,9.0,Freeway</item>
-        <item>Gears,8.0,7.0,6.0,8.0,6.0,9.0,1.0,7.0,Gears</item>
-        <item>Goldbug,9.0,8.0,4.0,8.0,8.0,10.0,1.0,7.0,Goldbug</item>
-        <item>Grapple,8.0,8.0,3.0,4.0,7.0,7.0,7.0,9.0,Grapple</item>
-        <item>Grimlock,10.0,7.0,3.0,10.0,9.0,10.0,8.0,10.0,Grimlock</item>
-        <item>Groove,4.0,9.0,5.0,7.0,6.0,8.0,6.0,8.0,Groove</item>
-        <item>Grotusque,7.0,10.0,4.0,6.0,8.0,10.0,7.0,10.0,Grotusque</item>
-        <item>Hardhead,10.0,6.0,5.0,9.0,5.0,10.0,8.0,6.0,Hardhead</item>
-        <item>Highbrow,7.0,7.0,7.0,6.0,6.0,6.0,6.0,10.0,Highbrow</item>
-        <item>Hoist,8.0,6.0,3.0,7.0,4.0,8.0,6.0,9.0,Hoist</item>
-        <item>Hot Rod,10.0,10.0,9.0,10.0,10.0,7.0,10.0,10.0,Hot_Rod</item>
-        <item>Hot Spot,9.0,7.0,4.0,9.0,7.0,9.0,7.0,6.0,Hot_Spot</item>
-        <item>Hound,5.0,8.0,5.0,7.0,6.0,10.0,3.0,9.0,Hound</item>
-        <item>Hubcap,3.0,9.0,4.0,3.0,6.0,8.0,1.0,9.0,Hubcap</item>
-        <item>Huffer,7.0,8.0,5.0,7.0,6.0,8.0,1.0,9.0,Huffer</item>
-        <item>Inferno,9.0,6.0,4.0,8.0,5.0,9.0,6.0,6.0,Inferno</item>
-        <item>Ironhide,7.0,7.0,3.0,9.0,7.0,10.0,7.0,7.0,Ironhide</item>
-        <item>Jazz,5.0,9.0,7.0,7.0,8.0,9.0,5.0,10.0,Jazz</item>
-        <item>Jetfire,6.0,10.0,10.0,4.0,10.0,9.0,7.0,9.0,Jetfire</item>
-        <item>Kup,9.0,7.0,6.0,9.0,8.0,9.0,6.0,8.0,Kup</item>
-        <item>Lightspeed,6.0,8.0,5.0,6.0,6.0,8.0,7.0,8.0,Lightspeed</item>
-        <item>Metroplex,10.0,8.0,2.0,9.0,8.0,10.0,10.0,9.0,Metroplex</item>
-        <item>Mirage,6.0,9.0,7.0,5.0,7.0,5.0,6.0,10.0,Mirage</item>
-        <item>Nosecone,7.0,6.0,3.0,9.0,5.0,8.0,7.0,7.0,Nosecone</item>
-        <item>Omega Supreme,10.0,5.0,3.0,10.0,7.0,10.0,10.0,6.0,Omega_Supreme</item>
-        <item>Optimus Prime,10.0,10.0,8.0,10.0,10.0,10.0,8.0,10.0,Optimus_Prime</item>
-        <item>Outback,4.0,5.0,6.0,5.0,4.0,9.0,6.0,5.5,Outback</item>
-        <item>Perceptor,7.0,10.0,2.0,7.0,7.0,8.0,8.0,10.0,Perceptor</item>
-        <item>Pipes,9.0,6.0,4.0,8.0,5.0,8.0,5.0,4.0,Pipes</item>
-        <item>Pointblank,7.0,7.0,4.0,7.0,8.0,10.0,6.0,8.0,Pointblank</item>
-        <item>Powerglide,3.0,7.0,8.0,7.0,5.0,8.0,6.0,9.0,Powerglide</item>
-        <item>Prowl,7.0,9.0,7.0,9.0,9.0,9.0,4.0,9.0,Prowl</item>
-        <item>Punch/Counterpunch,6.0,9.0,4.0,6.0,7.0,10.0,6.0,9.0,Punch_Counterpunch</item>
-        <item>Ramhorn,8.0,4.0,3.0,9.0,5.0,9.0,3.0,4.0,Ramhorn</item>
-        <item>Ratchet,4.0,8.0,4.0,5.0,7.0,8.0,3.0,10.0,Ratchet</item>
-        <item>Red Alert,5.0,7.0,3.0,5.0,7.0,7.0,7.0,8.0,Red_Alert</item>
-        <item>Repugnus,5.0,9.0,2.0,9.0,6.0,10.0,2.0,10.0,Repugnus</item>
-        <item>Rewind,4.0,9.0,2.0,7.0,6.0,7.0,4.0,8.0,Rewind</item>
-        <item>Roadbuster,8.0,7.0,5.0,9.0,8.0,10.0,6.0,7.0,Roadbuster</item>
-        <item>Rodimus Prime,10.0,10.0,9.0,10.0,10.0,10.0,9.0,10.0,Rodimus_Prime</item>
-        <item>Rollbar,5.0,7.0,4.0,7.0,6.0,10.0,1.0,9.0,Rollbar</item>
-        <item>Sandstorm,7.0,9.0,6.0,7.0,6.0,10.0,6.0,9.0,Sandstorm</item>
-        <item>Scattershot,8.0,7.0,7.0,8.0,8.0,9.0,8.0,6.0,Scattershot</item>
-        <item>Searchlight,3.0,7.0,5.0,8.0,6.0,4.0,1.0,9.0,Searchlight</item>
-        <item>Seaspray,3.0,8.0,6.0,6.0,6.0,10.0,6.0,7.0,Seaspray</item>
-        <item>Sideswipe,7.0,7.0,7.0,7.0,5.0,10.0,3.0,6.0,Sideswipe</item>
-        <item>Silverbolt,6.0,8.0,9.0,8.0,8.0,8.0,8.0,5.0,Silverbolt</item>
-        <item>Siren,6.0,7.0,6.0,7.0,7.0,9.0,6.0,6.0,Siren</item>
-        <item>Skids,4.0,9.0,5.0,6.0,8.0,7.0,7.0,7.0,Skids</item>
-        <item>Skydive,4.0,10.0,9.0,4.0,7.0,7.0,8.0,10.0,Skydive</item>
-        <item>Sky Lynx,10.0,8.0,10.0,10.0,9.0,10.0,7.0,8.0,Sky_Lynx</item>
-        <item>Slag,9.0,4.0,3.0,9.0,4.0,7.0,8.0,7.0,Slag</item>
-        <item>Slingshot,6.0,6.0,8.0,4.0,5.0,8.0,8.0,9.0,Slingshot</item>
-        <item>Sludge,9.0,3.0,2.0,10.0,4.0,9.0,1.0,5.0,Sludge</item>
-        <item>Smokescreen,4.0,9.0,7.0,6.0,6.0,8.0,7.0,9.0,Smokescreen</item>
-        <item>Snarl,9.0,6.0,3.0,9.0,4.0,8.0,1.0,4.0,Snarl</item>
-        <item>Springer,10.0,8.0,8.0,10.0,7.0,9.0,7.0,7.0,Springer</item>
-        <item>Steeljaw,8.0,8.0,2.0,9.0,6.0,9.0,1.0,9.0,Steeljaw</item>
-        <item>Strafe,5.0,6.0,6.0,7.0,5.0,8.0,7.0,4.0,Strafe</item>
-        <item>Streetwise,5.0,9.0,6.0,6.0,5.0,9.0,7.0,7.0,Streetwise</item>
-        <item>Sunstreaker,5.0,6.0,7.0,8.0,5.0,7.0,7.0,6.0,Sunstreaker</item>
-        <item>Superion,10.0,3.0,8.0,10.0,5.0,10.0,8.0,7.0,Superion</item>
-        <item>Sureshot,6.0,7.0,6.0,7.0,6.0,8.0,7.0,10.0,Sureshot</item>
-        <item>Swerve,6.0,8.0,5.0,8.0,5.0,6.0,1.0,7.0,Swerve</item>
-        <item>Swoop,6.0,6.0,8.0,9.0,5.0,7.0,7.0,7.0,Swoop</item>
-        <item>Tailgate,5.0,5.0,6.0,6.0,6.0,7.0,2.0,7.0,Tailgate</item>
-        <item>Topspin,6.0,6.0,8.0,5.0,6.0,10.0,9.0,8.0,Topspin</item>
-        <item>Tracks,6.0,6.0,7.0,8.0,5.0,6.0,8.0,8.0,Tracks</item>
-        <item>Trailbreaker,7.0,6.0,4.0,10.0,7.0,9.0,3.0,7.0,Trailbreaker</item>
-        <item>Twin Twist,8.0,4.0,7.0,7.0,5.0,9.0,7.0,6.0,Twin_Twist</item>
-        <item>Ultra Magnus,9.0,9.0,6.0,8.0,8.0,9.0,6.0,8.0,Ultra_Magnus</item>
-        <item>Warpath,9.0,5.0,2.0,8.0,5.0,9.0,7.0,10.0,Warpath</item>
-        <item>Wheelie,5.0,6.0,8.0,9.0,5.0,9.0,7.0,8.0,Wheelie</item>
-        <item>Wheeljack,7.0,9.0,7.0,5.0,8.0,9.0,7.0,10.0,Wheeljack</item>
-        <item>Whirl,8.0,8.0,8.0,8.0,6.0,9.0,8.0,8.0,Whirl</item>
-        <item>Wideload,9.0,4.0,2.0,9.0,5.0,7.0,1.0,5.0,Wideload</item>
-        <item>Windcharger,4.0,6.0,8.0,4.0,5.0,9.0,7.0,6.0,Windcharger</item>
-        <item>Wreck-Gar,8.0,7.0,6.0,10.0,7.0,9.0,7.0,7.0,Wreck-Gar</item>
+        <item>{ "id": 0, "name": "Afterburner", "team": "D", "strength": 7.0, "intelligence": 6.0, "speed": 6.0, "endurance": 6.0, "rank": 5.0, "courage": 9.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Air_Raid", "team": "D", "strength": 5.0, "intelligence": 7.0, "speed": 9.0, "endurance": 7.0, "rank": 5.0, "courage": 10.0, "firepower": 8.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Beachcomber", "team": "D", "strength": 3.0, "intelligence": 9.0, "speed": 5.0, "endurance": 9.0, "rank": 6.0, "courage": 6.0, "firepower": 1.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Blades", "team": "D", "strength": 7.0, "intelligence": 6.0, "speed": 7.0, "endurance": 5.0, "rank": 5.0, "courage": 9.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Blaster", "team": "D", "strength": 8.0, "intelligence": 8.0, "speed": 2.0, "endurance": 8.0, "rank": 7.0, "courage": 9.0, "firepower": 7.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Bluestreak", "team": "D", "strength": 6.0, "intelligence": 6.0, "speed": 7.0, "endurance": 9.0, "rank": 5.0, "courage": 2.0, "firepower": 9.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Blurr", "team": "D", "strength": 7.0, "intelligence": 8.0, "speed": 10.0, "endurance": 6.0, "rank": 7.0, "courage": 8.0, "firepower": 7.0, "skill": 5.0 }</item>
+        <item>{ "id": 0, "name": "Brainstorm", "team": "D", "strength": 5.0, "intelligence": 8.0, "speed": 9.0, "endurance": 6.0, "rank": 7.0, "courage": 9.0, "firepower": 7.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Brawn", "team": "D", "strength": 9.0, "intelligence": 3.0, "speed": 4.0, "endurance": 9.0, "rank": 5.0, "courage": 10.0, "firepower": 1.0, "skill": 4.0 }</item>
+        <item>{ "id": 0, "name": "Broadside", "team": "D", "strength": 8.0, "intelligence": 8.0, "speed": 9.0, "endurance": 8.0, "rank": 6.0, "courage": 9.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Bumblebee", "team": "D", "strength": 2.0, "intelligence": 8.0, "speed": 4.0, "endurance": 7.0, "rank": 7.0, "courage": 10.0, "firepower": 1.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Chase", "team": "D", "strength": 4.0, "intelligence": 6.0, "speed": 6.0, "endurance": 4.0, "rank": 6.0, "courage": 9.0, "firepower": 1.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Chromedome", "team": "D", "strength": 6.0, "intelligence": 9.0, "speed": 6.0, "endurance": 6.0, "rank": 7.0, "courage": 6.0, "firepower": 7.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Cliffjumper", "team": "D", "strength": 4.0, "intelligence": 4.0, "speed": 7.0, "endurance": 4.0, "rank": 5.0, "courage": 10.0, "firepower": 7.0, "skill": 5.0 }</item>
+        <item>{ "id": 0, "name": "Cloudraker", "team": "D", "strength": 6.0, "intelligence": 6.0, "speed": 8.0, "endurance": 6.0, "rank": 5.0, "courage": 7.0, "firepower": 6.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Computron", "team": "D", "strength": 9.0, "intelligence": 10.0, "speed": 2.0, "endurance": 8.0, "rank": 7.0, "courage": 10.0, "firepower": 7.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Cosmos", "team": "D", "strength": 2.0, "intelligence": 8.0, "speed": 10.0, "endurance": 6.0, "rank": 6.0, "courage": 7.0, "firepower": 6.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Crosshairs", "team": "D", "strength": 6.0, "intelligence": 8.0, "speed": 4.0, "endurance": 8.0, "rank": 6.0, "courage": 8.0, "firepower": 7.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Defensor", "team": "D", "strength": 10.0, "intelligence": 7.0, "speed": 2.0, "endurance": 9.0, "rank": 6.0, "courage": 10.0, "firepower": 8.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Doublecross", "team": "D", "strength": 1.0, "intelligence": 6.0, "speed": 2.0, "endurance": 10.0, "rank": 6.0, "courage": 9.0, "firepower": 6.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Eject", "team": "D", "strength": 6.0, "intelligence": 6.0, "speed": 2.0, "endurance": 6.0, "rank": 6.0, "courage": 8.0, "firepower": 5.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Fastlane", "team": "D", "strength": 6.0, "intelligence": 3.0, "speed": 6.0, "endurance": 6.0, "rank": 5.0, "courage": 9.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Fireflight", "team": "D", "strength": 7.0, "intelligence": 5.0, "speed": 8.0, "endurance": 8.0, "rank": 6.0, "courage": 9.0, "firepower": 7.0, "skill": 3.0 }</item>
+        <item>{ "id": 0, "name": "First_Aid", "team": "D", "strength": 4.0, "intelligence": 9.0, "speed": 4.0, "endurance": 6.0, "rank": 6.0, "courage": 7.0, "firepower": 6.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Fortress_Maximus", "team": "D", "strength": 10.0, "intelligence": 10.0, "speed": 10.0, "endurance": 9.0, "rank": 10.0, "courage": 10.0, "firepower": 10.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Freeway", "team": "D", "strength": 3.0, "intelligence": 6.0, "speed": 4.0, "endurance": 6.0, "rank": 6.0, "courage": 8.0, "firepower": 3.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Gears", "team": "D", "strength": 8.0, "intelligence": 7.0, "speed": 6.0, "endurance": 8.0, "rank": 6.0, "courage": 9.0, "firepower": 1.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Goldbug", "team": "D", "strength": 9.0, "intelligence": 8.0, "speed": 4.0, "endurance": 8.0, "rank": 8.0, "courage": 10.0, "firepower": 1.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Grapple", "team": "D", "strength": 8.0, "intelligence": 8.0, "speed": 3.0, "endurance": 4.0, "rank": 7.0, "courage": 7.0, "firepower": 7.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Grimlock", "team": "D", "strength": 10.0, "intelligence": 7.0, "speed": 3.0, "endurance": 10.0, "rank": 9.0, "courage": 10.0, "firepower": 8.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Groove", "team": "D", "strength": 4.0, "intelligence": 9.0, "speed": 5.0, "endurance": 7.0, "rank": 6.0, "courage": 8.0, "firepower": 6.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Grotusque", "team": "D", "strength": 7.0, "intelligence": 10.0, "speed": 4.0, "endurance": 6.0, "rank": 8.0, "courage": 10.0, "firepower": 7.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Hardhead", "team": "D", "strength": 10.0, "intelligence": 6.0, "speed": 5.0, "endurance": 9.0, "rank": 5.0, "courage": 10.0, "firepower": 8.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Highbrow", "team": "D", "strength": 7.0, "intelligence": 7.0, "speed": 7.0, "endurance": 6.0, "rank": 6.0, "courage": 6.0, "firepower": 6.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Hoist", "team": "D", "strength": 8.0, "intelligence": 6.0, "speed": 3.0, "endurance": 7.0, "rank": 4.0, "courage": 8.0, "firepower": 6.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Hot_Rod", "team": "D", "strength": 10.0, "intelligence": 10.0, "speed": 9.0, "endurance": 10.0, "rank": 10.0, "courage": 7.0, "firepower": 10.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Hot_Spot", "team": "D", "strength": 9.0, "intelligence": 7.0, "speed": 4.0, "endurance": 9.0, "rank": 7.0, "courage": 9.0, "firepower": 7.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Hound", "team": "D", "strength": 5.0, "intelligence": 8.0, "speed": 5.0, "endurance": 7.0, "rank": 6.0, "courage": 10.0, "firepower": 3.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Hubcap", "team": "D", "strength": 3.0, "intelligence": 9.0, "speed": 4.0, "endurance": 3.0, "rank": 6.0, "courage": 8.0, "firepower": 1.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Huffer", "team": "D", "strength": 7.0, "intelligence": 8.0, "speed": 5.0, "endurance": 7.0, "rank": 6.0, "courage": 8.0, "firepower": 1.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Inferno", "team": "D", "strength": 9.0, "intelligence": 6.0, "speed": 4.0, "endurance": 8.0, "rank": 5.0, "courage": 9.0, "firepower": 6.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Ironhide", "team": "D", "strength": 7.0, "intelligence": 7.0, "speed": 3.0, "endurance": 9.0, "rank": 7.0, "courage": 10.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Jazz", "team": "D", "strength": 5.0, "intelligence": 9.0, "speed": 7.0, "endurance": 7.0, "rank": 8.0, "courage": 9.0, "firepower": 5.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Jetfire", "team": "D", "strength": 6.0, "intelligence": 10.0, "speed": 10.0, "endurance": 4.0, "rank": 10.0, "courage": 9.0, "firepower": 7.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Kup", "team": "D", "strength": 9.0, "intelligence": 7.0, "speed": 6.0, "endurance": 9.0, "rank": 8.0, "courage": 9.0, "firepower": 6.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Lightspeed", "team": "D", "strength": 6.0, "intelligence": 8.0, "speed": 5.0, "endurance": 6.0, "rank": 6.0, "courage": 8.0, "firepower": 7.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Metroplex", "team": "D", "strength": 10.0, "intelligence": 8.0, "speed": 2.0, "endurance": 9.0, "rank": 8.0, "courage": 10.0, "firepower": 10.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Mirage", "team": "D", "strength": 6.0, "intelligence": 9.0, "speed": 7.0, "endurance": 5.0, "rank": 7.0, "courage": 5.0, "firepower": 6.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Nosecone", "team": "D", "strength": 7.0, "intelligence": 6.0, "speed": 3.0, "endurance": 9.0, "rank": 5.0, "courage": 8.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Omega_Supreme", "team": "D", "strength": 10.0, "intelligence": 5.0, "speed": 3.0, "endurance": 10.0, "rank": 7.0, "courage": 10.0, "firepower": 10.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Optimus_Prime", "team": "D", "strength": 10.0, "intelligence": 10.0, "speed": 8.0, "endurance": 10.0, "rank": 10.0, "courage": 10.0, "firepower": 8.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Outback", "team": "D", "strength": 4.0, "intelligence": 5.0, "speed": 6.0, "endurance": 5.0, "rank": 4.0, "courage": 9.0, "firepower": 6.0, "skill": 5 }</item>
+        <item>{ "id": 0, "name": "Perceptor", "team": "D", "strength": 7.0, "intelligence": 10.0, "speed": 2.0, "endurance": 7.0, "rank": 7.0, "courage": 8.0, "firepower": 8.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Pipes", "team": "D", "strength": 9.0, "intelligence": 6.0, "speed": 4.0, "endurance": 8.0, "rank": 5.0, "courage": 8.0, "firepower": 5.0, "skill": 4.0 }</item>
+        <item>{ "id": 0, "name": "Pointblank", "team": "D", "strength": 7.0, "intelligence": 7.0, "speed": 4.0, "endurance": 7.0, "rank": 8.0, "courage": 10.0, "firepower": 6.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Powerglide", "team": "D", "strength": 3.0, "intelligence": 7.0, "speed": 8.0, "endurance": 7.0, "rank": 5.0, "courage": 8.0, "firepower": 6.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Prowl", "team": "D", "strength": 7.0, "intelligence": 9.0, "speed": 7.0, "endurance": 9.0, "rank": 9.0, "courage": 9.0, "firepower": 4.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Punch_Counterpunch", "team": "D", "strength": 6.0, "intelligence": 9.0, "speed": 4.0, "endurance": 6.0, "rank": 7.0, "courage": 10.0, "firepower": 6.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Ramhorn", "team": "D", "strength": 8.0, "intelligence": 4.0, "speed": 3.0, "endurance": 9.0, "rank": 5.0, "courage": 9.0, "firepower": 3.0, "skill": 4.0 }</item>
+        <item>{ "id": 0, "name": "Ratchet", "team": "D", "strength": 4.0, "intelligence": 8.0, "speed": 4.0, "endurance": 5.0, "rank": 7.0, "courage": 8.0, "firepower": 3.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Red_Alert", "team": "D", "strength": 5.0, "intelligence": 7.0, "speed": 3.0, "endurance": 5.0, "rank": 7.0, "courage": 7.0, "firepower": 7.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Repugnus", "team": "D", "strength": 5.0, "intelligence": 9.0, "speed": 2.0, "endurance": 9.0, "rank": 6.0, "courage": 10.0, "firepower": 2.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Rewind", "team": "D", "strength": 4.0, "intelligence": 9.0, "speed": 2.0, "endurance": 7.0, "rank": 6.0, "courage": 7.0, "firepower": 4.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Roadbuster", "team": "D", "strength": 8.0, "intelligence": 7.0, "speed": 5.0, "endurance": 9.0, "rank": 8.0, "courage": 10.0, "firepower": 6.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Rodimus_Prime", "team": "D", "strength": 10.0, "intelligence": 10.0, "speed": 9.0, "endurance": 10.0, "rank": 10.0, "courage": 10.0, "firepower": 9.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Rollbar", "team": "D", "strength": 5.0, "intelligence": 7.0, "speed": 4.0, "endurance": 7.0, "rank": 6.0, "courage": 10.0, "firepower": 1.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Sandstorm", "team": "D", "strength": 7.0, "intelligence": 9.0, "speed": 6.0, "endurance": 7.0, "rank": 6.0, "courage": 10.0, "firepower": 6.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Scattershot", "team": "D", "strength": 8.0, "intelligence": 7.0, "speed": 7.0, "endurance": 8.0, "rank": 8.0, "courage": 9.0, "firepower": 8.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Searchlight", "team": "D", "strength": 3.0, "intelligence": 7.0, "speed": 5.0, "endurance": 8.0, "rank": 6.0, "courage": 4.0, "firepower": 1.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Seaspray", "team": "D", "strength": 3.0, "intelligence": 8.0, "speed": 6.0, "endurance": 6.0, "rank": 6.0, "courage": 10.0, "firepower": 6.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Sideswipe", "team": "D", "strength": 7.0, "intelligence": 7.0, "speed": 7.0, "endurance": 7.0, "rank": 5.0, "courage": 10.0, "firepower": 3.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Silverbolt", "team": "D", "strength": 6.0, "intelligence": 8.0, "speed": 9.0, "endurance": 8.0, "rank": 8.0, "courage": 8.0, "firepower": 8.0, "skill": 5.0 }</item>
+        <item>{ "id": 0, "name": "Siren", "team": "D", "strength": 6.0, "intelligence": 7.0, "speed": 6.0, "endurance": 7.0, "rank": 7.0, "courage": 9.0, "firepower": 6.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Skids", "team": "D", "strength": 4.0, "intelligence": 9.0, "speed": 5.0, "endurance": 6.0, "rank": 8.0, "courage": 7.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Skydive", "team": "D", "strength": 4.0, "intelligence": 10.0, "speed": 9.0, "endurance": 4.0, "rank": 7.0, "courage": 7.0, "firepower": 8.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Sky_Lynx", "team": "D", "strength": 10.0, "intelligence": 8.0, "speed": 10.0, "endurance": 10.0, "rank": 9.0, "courage": 10.0, "firepower": 7.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Slag", "team": "D", "strength": 9.0, "intelligence": 4.0, "speed": 3.0, "endurance": 9.0, "rank": 4.0, "courage": 7.0, "firepower": 8.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Slingshot", "team": "D", "strength": 6.0, "intelligence": 6.0, "speed": 8.0, "endurance": 4.0, "rank": 5.0, "courage": 8.0, "firepower": 8.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Sludge", "team": "D", "strength": 9.0, "intelligence": 3.0, "speed": 2.0, "endurance": 10.0, "rank": 4.0, "courage": 9.0, "firepower": 1.0, "skill": 5.0 }</item>
+        <item>{ "id": 0, "name": "Smokescreen", "team": "D", "strength": 4.0, "intelligence": 9.0, "speed": 7.0, "endurance": 6.0, "rank": 6.0, "courage": 8.0, "firepower": 7.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Snarl", "team": "D", "strength": 9.0, "intelligence": 6.0, "speed": 3.0, "endurance": 9.0, "rank": 4.0, "courage": 8.0, "firepower": 1.0, "skill": 4.0 }</item>
+        <item>{ "id": 0, "name": "Springer", "team": "D", "strength": 10.0, "intelligence": 8.0, "speed": 8.0, "endurance": 10.0, "rank": 7.0, "courage": 9.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Steeljaw", "team": "D", "strength": 8.0, "intelligence": 8.0, "speed": 2.0, "endurance": 9.0, "rank": 6.0, "courage": 9.0, "firepower": 1.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Strafe", "team": "D", "strength": 5.0, "intelligence": 6.0, "speed": 6.0, "endurance": 7.0, "rank": 5.0, "courage": 8.0, "firepower": 7.0, "skill": 4.0 }</item>
+        <item>{ "id": 0, "name": "Streetwise", "team": "D", "strength": 5.0, "intelligence": 9.0, "speed": 6.0, "endurance": 6.0, "rank": 5.0, "courage": 9.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Sunstreaker", "team": "D", "strength": 5.0, "intelligence": 6.0, "speed": 7.0, "endurance": 8.0, "rank": 5.0, "courage": 7.0, "firepower": 7.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Superion", "team": "D", "strength": 10.0, "intelligence": 3.0, "speed": 8.0, "endurance": 10.0, "rank": 5.0, "courage": 10.0, "firepower": 8.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Sureshot", "team": "D", "strength": 6.0, "intelligence": 7.0, "speed": 6.0, "endurance": 7.0, "rank": 6.0, "courage": 8.0, "firepower": 7.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Swerve", "team": "D", "strength": 6.0, "intelligence": 8.0, "speed": 5.0, "endurance": 8.0, "rank": 5.0, "courage": 6.0, "firepower": 1.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Swoop", "team": "D", "strength": 6.0, "intelligence": 6.0, "speed": 8.0, "endurance": 9.0, "rank": 5.0, "courage": 7.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Tailgate", "team": "D", "strength": 5.0, "intelligence": 5.0, "speed": 6.0, "endurance": 6.0, "rank": 6.0, "courage": 7.0, "firepower": 2.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Topspin", "team": "D", "strength": 6.0, "intelligence": 6.0, "speed": 8.0, "endurance": 5.0, "rank": 6.0, "courage": 10.0, "firepower": 9.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Tracks", "team": "D", "strength": 6.0, "intelligence": 6.0, "speed": 7.0, "endurance": 8.0, "rank": 5.0, "courage": 6.0, "firepower": 8.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Trailbreaker", "team": "D", "strength": 7.0, "intelligence": 6.0, "speed": 4.0, "endurance": 10.0, "rank": 7.0, "courage": 9.0, "firepower": 3.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Twin_Twist", "team": "D", "strength": 8.0, "intelligence": 4.0, "speed": 7.0, "endurance": 7.0, "rank": 5.0, "courage": 9.0, "firepower": 7.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Ultra_Magnus", "team": "D", "strength": 9.0, "intelligence": 9.0, "speed": 6.0, "endurance": 8.0, "rank": 8.0, "courage": 9.0, "firepower": 6.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Warpath", "team": "D", "strength": 9.0, "intelligence": 5.0, "speed": 2.0, "endurance": 8.0, "rank": 5.0, "courage": 9.0, "firepower": 7.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Wheelie", "team": "D", "strength": 5.0, "intelligence": 6.0, "speed": 8.0, "endurance": 9.0, "rank": 5.0, "courage": 9.0, "firepower": 7.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Wheeljack", "team": "D", "strength": 7.0, "intelligence": 9.0, "speed": 7.0, "endurance": 5.0, "rank": 8.0, "courage": 9.0, "firepower": 7.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Whirl", "team": "D", "strength": 8.0, "intelligence": 8.0, "speed": 8.0, "endurance": 8.0, "rank": 6.0, "courage": 9.0, "firepower": 8.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Wideload", "team": "D", "strength": 9.0, "intelligence": 4.0, "speed": 2.0, "endurance": 9.0, "rank": 5.0, "courage": 7.0, "firepower": 1.0, "skill": 5.0 }</item>
+        <item>{ "id": 0, "name": "Windcharger", "team": "D", "strength": 4.0, "intelligence": 6.0, "speed": 8.0, "endurance": 4.0, "rank": 5.0, "courage": 9.0, "firepower": 7.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Wreck-Gar", "team": "D", "strength": 8.0, "intelligence": 7.0, "speed": 6.0, "endurance": 10.0, "rank": 7.0, "courage": 9.0, "firepower": 7.0, "skill": 7.0 }</item>
     </string-array>
 
     <string-array name="stats_decepticons">
-        <item>Abominus,10.0,1.0,3.0,10.0,5.0,10.0,8.0,4.0,Abominus</item>
-        <item>Apeface,10.0,9.0,9.0,8.0,6.0,7.0,7.0,7.0,Apeface</item>
-        <item>Astrotrain,9.0,7.0,10.0,7.0,6.0,7.0,6.0,8.0,Astrotrain</item>
-        <item>Barrage,3.0,8.0,3.0,7.0,5.0,10.0,9.0,8.0,Barrage</item>
-        <item>Battletrap,7.0,3.0,6.0,8.0,6.0,6.0,7.0,7.0,Battletrap</item>
-        <item>Blast Off,3.0,8.0,10.0,3.0,5.0,5.0,9.0,10.0,Blast_Off</item>
-        <item>Blitzwing,8.0,5.0,9.0,8.0,6.0,7.0,7.0,7.0,Blitzwing</item>
-        <item>Blot,9.0,2.0,2.0,10.0,4.0,10.0,6.0,5.0,Blot</item>
-        <item>Bombshell,5.0,8.0,4.0,5.0,6.0,5.0,6.0,9.0,Bombshell</item>
-        <item>Bonecrusher,9.0,3.0,2.0,9.0,4.0,8.0,6.0,6.0,Bonecrusher</item>
-        <item>Brawl,8.0,2.0,4.0,9.0,5.0,9.0,8.0,7.0,Brawl</item>
-        <item>Breakdown,6.0,7.0,7.0,5.0,6.0,8.0,6.0,6.0,Breakdown</item>
-        <item>Bruticus,10.0,3.0,1.0,9.0,5.0,10.0,8.0,6.0,Bruticus</item>
-        <item>Buzzsaw,5.0,8.0,8.0,4.0,6.0,7.0,4.0,9.0,Buzzsaw</item>
-        <item>Chop Shop,7.0,8.0,4.0,5.0,6.0,7.0,6.0,10.0,Chop_Shop</item>
-        <item>Punch/Counterpunch,6.0,9.0,4.0,6.0,7.0,10.0,6.0,9.0,Punch_Counterpunch</item>
-        <item>Cutthroat,8.0,4.0,4.0,9.0,5.0,8.0,7.0,7.0,Cutthroat</item>
-        <item>Cyclonus,8.0,8.0,9.0,8.0,9.0,9.0,8.0,8.0,Cyclonus</item>
-        <item>Dead End,7.0,6.0,7.0,7.0,5.0,9.0,5.0,7.0,Dead_End</item>
-        <item>Devastator,10.0,2.0,1.0,9.0,6.0,10.0,8.0,4.0,Devastator</item>
-        <item>Dirge,7.0,8.0,8.0,6.0,5.0,4.0,8.0,9.0,Dirge</item>
-        <item>Divebomb,7.0,8.0,6.0,7.0,6.0,8.0,7.0,7.0,Divebomb</item>
-        <item>Drag Strip,6.0,7.0,7.0,4.0,5.0,8.0,7.0,6.0,Drag_Strip</item>
-        <item>Fangry,6.0,8.0,6.0,8.0,6.0,8.0,6.0,8.0,Fangry</item>
-        <item>Flywheels,7.0,4.0,7.0,7.0,6.0,8.0,8.0,6.0,Flywheels</item>
-        <item>Frenzy,3.0,5.0,3.0,6.0,5.0,10.0,9.0,6.0,Frenzy</item>
-        <item>Galvatron,10.0,9.0,9.0,10.0,9.0,9.0,9.0,10.0,Galvatron</item>
-        <item>Gnaw,7.0,3.0,4.0,8.0,2.0,8.0,5.0,5.0,Gnaw</item>
-        <item>Headstrong,7.0,5.0,4.0,7.0,5.0,6.0,8.0,6.0,Headstrong</item>
-        <item>Hook,8.0,9.0,3.0,6.0,4.0,6.0,5.0,10.0,Hook</item>
-        <item>Hun-Grrr,9.0,8.0,3.0,10.0,9.0,10.0,9.0,6.0,Hun-Grrr</item>
-        <item>Kickback,3.0,9.0,4.0,4.0,7.0,6.0,5.0,8.0,Kickback</item>
-        <item>Laserbeak,5.0,6.0,8.0,5.0,6.0,2.0,8.0,9.0,Laserbeak</item>
-        <item>Long Haul,9.0,5.0,2.0,9.0,4.0,8.0,7.0,4.0,Long_Haul</item>
-        <item>Megatron,10.0,10.0,4.0,8.0,10.0,9.0,10.0,9.0,Megatron</item>
-        <item>Menasor,10.0,3.0,2.0,9.0,5.0,9.0,9.0,6.0,Menasor</item>
-        <item>Mindwipe,8.0,6.0,7.0,5.0,7.0,8.0,7.0,9.0,Mindwipe</item>
-        <item>Misfire,7.0,8.0,7.0,9.0,6.0,4.0,7.0,2.0,Misfire</item>
-        <item>Mixmaster,7.0,6.0,3.0,8.0,4.0,6.0,7.0,9.0,Mixmaster</item>
-        <item>Motormaster,9.0,6.0,5.0,10.0,7.0,9.0,7.0,4.0,Motormaster</item>
-        <item>Octane,6.0,6.0,7.0,4.0,7.0,3.0,4.0,7.0,Octane</item>
-        <item>Onslaught,8.0,8.0,3.0,7.0,7.0,8.0,8.0,9.0,Onslaught</item>
-        <item>Overkill,8.0,5.0,2.0,8.0,5.0,6.0,5.5,5.0,Overkill</item>
-        <item>Pounce,5.0,7.0,4.0,5.0,6.0,8.0,7.0,10.0,Pounce</item>
-        <item>Predaking,10.0,5.0,2.5,8.0,7.0,9.0,9.0,8.0,Predaking</item>
-        <item>Ramjet,8.0,5.0,9.0,9.0,5.0,8.0,7.0,6.0,Ramjet</item>
-        <item>Rampage,8.0,3.0,5.0,6.0,5.0,8.0,9.0,6.0,Rampage</item>
-        <item>Ransack,8.0,5.0,3.0,8.0,5.0,9.0,9.0,5.0,Ransack</item>
-        <item>Ratbat,3.0,9.0,4.0,3.0,6.0,7.0,2.0,9.0,Ratbat</item>
-        <item>Ravage,5.0,8.0,5.0,6.0,7.0,4.0,7.0,10.0,Ravage</item>
-        <item>Razorclaw,8.0,9.0,4.0,9.0,8.0,10.0,7.0,7.0,Razorclaw</item>
-        <item>Reflector,7.0,8.0,2.0,6.0,6.0,7.0,6.0,9.0,Reflector</item>
-        <item>Rippersnapper,3.0,5.0,5.0,9.0,6.0,8.0,8.0,6.0,Rippersnapper</item>
-        <item>Rumble,2.0,5.0,2.0,9.0,5.0,7.0,9.0,5.0,Rumble</item>
-        <item>Runabout,5.0,6.0,7.0,7.0,6.0,7.0,7.0,7.0,Runabout</item>
-        <item>Runamuck,6.0,6.0,7.0,7.0,6.0,5.0,7.0,8.0,Runamuck</item>
-        <item>Scavenger,7.0,2.0,3.0,6.0,4.0,9.0,6.0,7.0,Scavenger</item>
-        <item>Scorponok,10.0,9.0,4.0,10.0,10.0,10.0,9.0,9.0,Scorponok</item>
-        <item>Scourge,8.0,8.0,9.0,8.0,9.0,9.0,8.0,8.0,Scourge</item>
-        <item>Scrapper,8.0,8.0,4.0,7.0,5.0,5.0,3.0,9.0,Scrapper</item>
-        <item>Shockwave,9.0,10.0,7.0,7.0,9.0,9.0,9.0,9.0,Shockwave</item>
-        <item>Shrapnel,9.0,6.0,4.0,7.0,6.0,6.0,8.0,9.0,Shrapnel</item>
-        <item>Sinnertwin,8.0,6.0,3.0,9.0,5.0,5.0,6.0,7.0,Sinnertwin</item>
-        <item>Sixshot,10.0,9.0,4.0,9.0,7.0,8.0,9.0,8.0,Sixshot</item>
-        <item>Skullcruncher,10.0,8.0,3.0,10.0,5.0,9.0,5.0,6.0,Skullcruncher</item>
-        <item>Skywarp,7.0,9.0,10.0,7.0,9.0,9.0,8.0,8.0,Skywarp</item>
-        <item>Slugfest,9.0,2.0,1.0,8.0,4.0,8.0,5.0,4.0,Slugfest</item>
-        <item>Slugslinger,6.0,8.0,8.0,7.0,6.0,3.0,8.0,9.0,Slugslinger</item>
-        <item>Snapdragon,10.0,9.0,9.0,8.0,6.0,7.0,7.0,7.0,Snapdragon</item>
-        <item>Soundwave,8.0,9.0,2.0,6.0,8.0,5.0,6.0,10.0,Soundwave</item>
-        <item>Starscream,7.0,7.0,9.0,7.0,5.0,8.0,7.0,7.0,Starscream</item>
-        <item>Swindle,5.0,9.0,5.0,6.0,6.0,5.0,7.0,10.0,Swindle</item>
-        <item>Tantrum,8.0,4.0,3.0,9.0,5.0,9.0,8.0,7.0,Tantrum</item>
-        <item>Thrust,8.0,6.0,9.0,6.0,5.0,4.0,8.0,7.0,Thrust</item>
-        <item>Thundercracker,7.0,4.0,9.0,7.0,5.0,8.0,7.0,7.0,Thundercracker</item>
-        <item>Triggerhappy,7.0,7.0,7.0,7.0,5.0,9.0,8.0,6.0,Triggerhappy</item>
-        <item>Trypticon,10.0,7.0,8.0,10.0,9.0,10.0,10.0,8.0,Trypticon</item>
-        <item>Venom,3.0,9.0,3.0,6.0,8.0,9.0,8.0,8.0,Venom</item>
-        <item>Vortex,4.0,9.0,6.0,5.0,6.0,7.0,7.0,8.0,Vortex</item>
-        <item>Weirdwolf,6.0,10.0,6.0,10.0,6.0,9.0,5.0,6.0,Weirdwolf</item>
-        <item>Wildrider,6.0,6.0,7.0,6.0,5.0,8.0,7.0,6.0,Wildrider</item>
-        <item>Wingspan,5.0,9.0,6.0,5.0,6.0,7.0,7.0,9.0,Wingspan</item>
+        <item>{ "id": 0, "name": "Abominus", "team": "D", "strength": 10.0, "intelligence": 1.0, "speed": 3.0, "endurance": 10.0, "rank": 5.0, "courage": 10.0, "firepower": 8.0, "skill": 4.0 }</item>
+        <item>{ "id": 0, "name": "Apeface", "team": "D", "strength": 10.0, "intelligence": 9.0, "speed": 9.0, "endurance": 8.0, "rank": 6.0, "courage": 7.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Astrotrain", "team": "D", "strength": 9.0, "intelligence": 7.0, "speed": 10.0, "endurance": 7.0, "rank": 6.0, "courage": 7.0, "firepower": 6.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Barrage", "team": "D", "strength": 3.0, "intelligence": 8.0, "speed": 3.0, "endurance": 7.0, "rank": 5.0, "courage": 10.0, "firepower": 9.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Battletrap", "team": "D", "strength": 7.0, "intelligence": 3.0, "speed": 6.0, "endurance": 8.0, "rank": 6.0, "courage": 6.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Blast_Off", "team": "D", "strength": 3.0, "intelligence": 8.0, "speed": 10.0, "endurance": 3.0, "rank": 5.0, "courage": 5.0, "firepower": 9.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Blitzwing", "team": "D", "strength": 8.0, "intelligence": 5.0, "speed": 9.0, "endurance": 8.0, "rank": 6.0, "courage": 7.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Blot", "team": "D", "strength": 9.0, "intelligence": 2.0, "speed": 2.0, "endurance": 10.0, "rank": 4.0, "courage": 10.0, "firepower": 6.0, "skill": 5.0 }</item>
+        <item>{ "id": 0, "name": "Bombshell", "team": "D", "strength": 5.0, "intelligence": 8.0, "speed": 4.0, "endurance": 5.0, "rank": 6.0, "courage": 5.0, "firepower": 6.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Bonecrusher", "team": "D", "strength": 9.0, "intelligence": 3.0, "speed": 2.0, "endurance": 9.0, "rank": 4.0, "courage": 8.0, "firepower": 6.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Brawl", "team": "D", "strength": 8.0, "intelligence": 2.0, "speed": 4.0, "endurance": 9.0, "rank": 5.0, "courage": 9.0, "firepower": 8.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Breakdown", "team": "D", "strength": 6.0, "intelligence": 7.0, "speed": 7.0, "endurance": 5.0, "rank": 6.0, "courage": 8.0, "firepower": 6.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Bruticus", "team": "D", "strength": 10.0, "intelligence": 3.0, "speed": 1.0, "endurance": 9.0, "rank": 5.0, "courage": 10.0, "firepower": 8.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Buzzsaw", "team": "D", "strength": 5.0, "intelligence": 8.0, "speed": 8.0, "endurance": 4.0, "rank": 6.0, "courage": 7.0, "firepower": 4.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Chop_Shop", "team": "D", "strength": 7.0, "intelligence": 8.0, "speed": 4.0, "endurance": 5.0, "rank": 6.0, "courage": 7.0, "firepower": 6.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Punch_Counterpunch", "team": "D", "strength": 6.0, "intelligence": 9.0, "speed": 4.0, "endurance": 6.0, "rank": 7.0, "courage": 10.0, "firepower": 6.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Cutthroat", "team": "D", "strength": 8.0, "intelligence": 4.0, "speed": 4.0, "endurance": 9.0, "rank": 5.0, "courage": 8.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Cyclonus", "team": "D", "strength": 8.0, "intelligence": 8.0, "speed": 9.0, "endurance": 8.0, "rank": 9.0, "courage": 9.0, "firepower": 8.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Dead_End", "team": "D", "strength": 7.0, "intelligence": 6.0, "speed": 7.0, "endurance": 7.0, "rank": 5.0, "courage": 9.0, "firepower": 5.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Devastator", "team": "D", "strength": 10.0, "intelligence": 2.0, "speed": 1.0, "endurance": 9.0, "rank": 6.0, "courage": 10.0, "firepower": 8.0, "skill": 4.0 }</item>
+        <item>{ "id": 0, "name": "Dirge", "team": "D", "strength": 7.0, "intelligence": 8.0, "speed": 8.0, "endurance": 6.0, "rank": 5.0, "courage": 4.0, "firepower": 8.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Divebomb", "team": "D", "strength": 7.0, "intelligence": 8.0, "speed": 6.0, "endurance": 7.0, "rank": 6.0, "courage": 8.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Drag_Strip", "team": "D", "strength": 6.0, "intelligence": 7.0, "speed": 7.0, "endurance": 4.0, "rank": 5.0, "courage": 8.0, "firepower": 7.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Fangry", "team": "D", "strength": 6.0, "intelligence": 8.0, "speed": 6.0, "endurance": 8.0, "rank": 6.0, "courage": 8.0, "firepower": 6.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Flywheels", "team": "D", "strength": 7.0, "intelligence": 4.0, "speed": 7.0, "endurance": 7.0, "rank": 6.0, "courage": 8.0, "firepower": 8.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Frenzy", "team": "D", "strength": 3.0, "intelligence": 5.0, "speed": 3.0, "endurance": 6.0, "rank": 5.0, "courage": 10.0, "firepower": 9.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Galvatron", "team": "D", "strength": 10.0, "intelligence": 9.0, "speed": 9.0, "endurance": 10.0, "rank": 9.0, "courage": 9.0, "firepower": 9.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Gnaw", "team": "D", "strength": 7.0, "intelligence": 3.0, "speed": 4.0, "endurance": 8.0, "rank": 2.0, "courage": 8.0, "firepower": 5.0, "skill": 5.0 }</item>
+        <item>{ "id": 0, "name": "Headstrong", "team": "D", "strength": 7.0, "intelligence": 5.0, "speed": 4.0, "endurance": 7.0, "rank": 5.0, "courage": 6.0, "firepower": 8.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Hook", "team": "D", "strength": 8.0, "intelligence": 9.0, "speed": 3.0, "endurance": 6.0, "rank": 4.0, "courage": 6.0, "firepower": 5.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Hun-Grrr", "team": "D", "strength": 9.0, "intelligence": 8.0, "speed": 3.0, "endurance": 10.0, "rank": 9.0, "courage": 10.0, "firepower": 9.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Kickback", "team": "D", "strength": 3.0, "intelligence": 9.0, "speed": 4.0, "endurance": 4.0, "rank": 7.0, "courage": 6.0, "firepower": 5.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Laserbeak", "team": "D", "strength": 5.0, "intelligence": 6.0, "speed": 8.0, "endurance": 5.0, "rank": 6.0, "courage": 2.0, "firepower": 8.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Long_Haul", "team": "D", "strength": 9.0, "intelligence": 5.0, "speed": 2.0, "endurance": 9.0, "rank": 4.0, "courage": 8.0, "firepower": 7.0, "skill": 4.0 }</item>
+        <item>{ "id": 0, "name": "Megatron", "team": "D", "strength": 10.0, "intelligence": 10.0, "speed": 4.0, "endurance": 8.0, "rank": 10.0, "courage": 9.0, "firepower": 10.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Menasor", "team": "D", "strength": 10.0, "intelligence": 3.0, "speed": 2.0, "endurance": 9.0, "rank": 5.0, "courage": 9.0, "firepower": 9.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Mindwipe", "team": "D", "strength": 8.0, "intelligence": 6.0, "speed": 7.0, "endurance": 5.0, "rank": 7.0, "courage": 8.0, "firepower": 7.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Misfire", "team": "D", "strength": 7.0, "intelligence": 8.0, "speed": 7.0, "endurance": 9.0, "rank": 6.0, "courage": 4.0, "firepower": 7.0, "skill": 2.0 }</item>
+        <item>{ "id": 0, "name": "Mixmaster", "team": "D", "strength": 7.0, "intelligence": 6.0, "speed": 3.0, "endurance": 8.0, "rank": 4.0, "courage": 6.0, "firepower": 7.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Motormaster", "team": "D", "strength": 9.0, "intelligence": 6.0, "speed": 5.0, "endurance": 10.0, "rank": 7.0, "courage": 9.0, "firepower": 7.0, "skill": 4.0 }</item>
+        <item>{ "id": 0, "name": "Octane", "team": "D", "strength": 6.0, "intelligence": 6.0, "speed": 7.0, "endurance": 4.0, "rank": 7.0, "courage": 3.0, "firepower": 4.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Onslaught", "team": "D", "strength": 8.0, "intelligence": 8.0, "speed": 3.0, "endurance": 7.0, "rank": 7.0, "courage": 8.0, "firepower": 8.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Overkill", "team": "D", "strength": 8.0, "intelligence": 5.0, "speed": 2.0, "endurance": 8.0, "rank": 5.0, "courage": 6.0, "firepower": 5, "skill": 5.0 }</item>
+        <item>{ "id": 0, "name": "Pounce", "team": "D", "strength": 5.0, "intelligence": 7.0, "speed": 4.0, "endurance": 5.0, "rank": 6.0, "courage": 8.0, "firepower": 7.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Predaking", "team": "D", "strength": 10.0, "intelligence": 5.0, "speed": 2, "endurance": 8.0, "rank": 7.0, "courage": 9.0, "firepower": 9.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Ramjet", "team": "D", "strength": 8.0, "intelligence": 5.0, "speed": 9.0, "endurance": 9.0, "rank": 5.0, "courage": 8.0, "firepower": 7.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Rampage", "team": "D", "strength": 8.0, "intelligence": 3.0, "speed": 5.0, "endurance": 6.0, "rank": 5.0, "courage": 8.0, "firepower": 9.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Ransack", "team": "D", "strength": 8.0, "intelligence": 5.0, "speed": 3.0, "endurance": 8.0, "rank": 5.0, "courage": 9.0, "firepower": 9.0, "skill": 5.0 }</item>
+        <item>{ "id": 0, "name": "Ratbat", "team": "D", "strength": 3.0, "intelligence": 9.0, "speed": 4.0, "endurance": 3.0, "rank": 6.0, "courage": 7.0, "firepower": 2.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Ravage", "team": "D", "strength": 5.0, "intelligence": 8.0, "speed": 5.0, "endurance": 6.0, "rank": 7.0, "courage": 4.0, "firepower": 7.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Razorclaw", "team": "D", "strength": 8.0, "intelligence": 9.0, "speed": 4.0, "endurance": 9.0, "rank": 8.0, "courage": 10.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Reflector", "team": "D", "strength": 7.0, "intelligence": 8.0, "speed": 2.0, "endurance": 6.0, "rank": 6.0, "courage": 7.0, "firepower": 6.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Rippersnapper", "team": "D", "strength": 3.0, "intelligence": 5.0, "speed": 5.0, "endurance": 9.0, "rank": 6.0, "courage": 8.0, "firepower": 8.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Rumble", "team": "D", "strength": 2.0, "intelligence": 5.0, "speed": 2.0, "endurance": 9.0, "rank": 5.0, "courage": 7.0, "firepower": 9.0, "skill": 5.0 }</item>
+        <item>{ "id": 0, "name": "Runabout", "team": "D", "strength": 5.0, "intelligence": 6.0, "speed": 7.0, "endurance": 7.0, "rank": 6.0, "courage": 7.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Runamuck", "team": "D", "strength": 6.0, "intelligence": 6.0, "speed": 7.0, "endurance": 7.0, "rank": 6.0, "courage": 5.0, "firepower": 7.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Scavenger", "team": "D", "strength": 7.0, "intelligence": 2.0, "speed": 3.0, "endurance": 6.0, "rank": 4.0, "courage": 9.0, "firepower": 6.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Scorponok", "team": "D", "strength": 10.0, "intelligence": 9.0, "speed": 4.0, "endurance": 10.0, "rank": 10.0, "courage": 10.0, "firepower": 9.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Scourge", "team": "D", "strength": 8.0, "intelligence": 8.0, "speed": 9.0, "endurance": 8.0, "rank": 9.0, "courage": 9.0, "firepower": 8.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Scrapper", "team": "D", "strength": 8.0, "intelligence": 8.0, "speed": 4.0, "endurance": 7.0, "rank": 5.0, "courage": 5.0, "firepower": 3.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Shockwave", "team": "D", "strength": 9.0, "intelligence": 10.0, "speed": 7.0, "endurance": 7.0, "rank": 9.0, "courage": 9.0, "firepower": 9.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Shrapnel", "team": "D", "strength": 9.0, "intelligence": 6.0, "speed": 4.0, "endurance": 7.0, "rank": 6.0, "courage": 6.0, "firepower": 8.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Sinnertwin", "team": "D", "strength": 8.0, "intelligence": 6.0, "speed": 3.0, "endurance": 9.0, "rank": 5.0, "courage": 5.0, "firepower": 6.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Sixshot", "team": "D", "strength": 10.0, "intelligence": 9.0, "speed": 4.0, "endurance": 9.0, "rank": 7.0, "courage": 8.0, "firepower": 9.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Skullcruncher", "team": "D", "strength": 10.0, "intelligence": 8.0, "speed": 3.0, "endurance": 10.0, "rank": 5.0, "courage": 9.0, "firepower": 5.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Skywarp", "team": "D", "strength": 7.0, "intelligence": 9.0, "speed": 10.0, "endurance": 7.0, "rank": 9.0, "courage": 9.0, "firepower": 8.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Slugfest", "team": "D", "strength": 9.0, "intelligence": 2.0, "speed": 1.0, "endurance": 8.0, "rank": 4.0, "courage": 8.0, "firepower": 5.0, "skill": 4.0 }</item>
+        <item>{ "id": 0, "name": "Slugslinger", "team": "D", "strength": 6.0, "intelligence": 8.0, "speed": 8.0, "endurance": 7.0, "rank": 6.0, "courage": 3.0, "firepower": 8.0, "skill": 9.0 }</item>
+        <item>{ "id": 0, "name": "Snapdragon", "team": "D", "strength": 10.0, "intelligence": 9.0, "speed": 9.0, "endurance": 8.0, "rank": 6.0, "courage": 7.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Soundwave", "team": "D", "strength": 8.0, "intelligence": 9.0, "speed": 2.0, "endurance": 6.0, "rank": 8.0, "courage": 5.0, "firepower": 6.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Starscream", "team": "D", "strength": 7.0, "intelligence": 7.0, "speed": 9.0, "endurance": 7.0, "rank": 5.0, "courage": 8.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Swindle", "team": "D", "strength": 5.0, "intelligence": 9.0, "speed": 5.0, "endurance": 6.0, "rank": 6.0, "courage": 5.0, "firepower": 7.0, "skill": 10.0 }</item>
+        <item>{ "id": 0, "name": "Tantrum", "team": "D", "strength": 8.0, "intelligence": 4.0, "speed": 3.0, "endurance": 9.0, "rank": 5.0, "courage": 9.0, "firepower": 8.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Thrust", "team": "D", "strength": 8.0, "intelligence": 6.0, "speed": 9.0, "endurance": 6.0, "rank": 5.0, "courage": 4.0, "firepower": 8.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Thundercracker", "team": "D", "strength": 7.0, "intelligence": 4.0, "speed": 9.0, "endurance": 7.0, "rank": 5.0, "courage": 8.0, "firepower": 7.0, "skill": 7.0 }</item>
+        <item>{ "id": 0, "name": "Triggerhappy", "team": "D", "strength": 7.0, "intelligence": 7.0, "speed": 7.0, "endurance": 7.0, "rank": 5.0, "courage": 9.0, "firepower": 8.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Trypticon", "team": "D", "strength": 10.0, "intelligence": 7.0, "speed": 8.0, "endurance": 10.0, "rank": 9.0, "courage": 10.0, "firepower": 10.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Venom", "team": "D", "strength": 3.0, "intelligence": 9.0, "speed": 3.0, "endurance": 6.0, "rank": 8.0, "courage": 9.0, "firepower": 8.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Vortex", "team": "D", "strength": 4.0, "intelligence": 9.0, "speed": 6.0, "endurance": 5.0, "rank": 6.0, "courage": 7.0, "firepower": 7.0, "skill": 8.0 }</item>
+        <item>{ "id": 0, "name": "Weirdwolf", "team": "D", "strength": 6.0, "intelligence": 10.0, "speed": 6.0, "endurance": 10.0, "rank": 6.0, "courage": 9.0, "firepower": 5.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Wildrider", "team": "D", "strength": 6.0, "intelligence": 6.0, "speed": 7.0, "endurance": 6.0, "rank": 5.0, "courage": 8.0, "firepower": 7.0, "skill": 6.0 }</item>
+        <item>{ "id": 0, "name": "Wingspan", "team": "D", "strength": 5.0, "intelligence": 9.0, "speed": 6.0, "endurance": 5.0, "rank": 6.0, "courage": 7.0, "firepower": 7.0, "skill": 9.0 }</item>
     </string-array>
 
 </resources>
