@@ -7,15 +7,19 @@ import android.widget.ImageView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.google.android.material.appbar.AppBarLayout
 import com.jnkhan.transfomersfightclub.R
+import com.jnkhan.transfomersfightclub.viewmodel.TFCViewModel
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var viewModel = ViewModelProvider(this).get(TFCViewModel::class.java)
 
         var appBar = findViewById<AppBarLayout>(R.id.appBar)
 

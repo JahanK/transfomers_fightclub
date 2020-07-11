@@ -56,8 +56,10 @@ class SelectionFragment : Fragment() {
     }
 
     fun onClick(transformer: Transformer) {
-        var viewModel = ViewModelProvider(this).get(TFCViewModel::class.java)
+        var viewModel = ViewModelProvider(requireActivity()).get(TFCViewModel::class.java)
         viewModel.addATransformer(transformer)
+
+        activity?.finish()
     }
 
     companion object {

@@ -1,14 +1,11 @@
 package com.jnkhan.transfomersfightclub.store;
 
-import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-
-import java.util.Comparator;
 
 public class Transformer {
 
     @SerializedName("id")
-    private int id;
+    private String id;
 
     @SerializedName("name")
     private String name;
@@ -46,11 +43,11 @@ public class Transformer {
     public Transformer() {
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
