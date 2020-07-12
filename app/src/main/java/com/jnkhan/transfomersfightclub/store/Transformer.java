@@ -1,9 +1,16 @@
 package com.jnkhan.transfomersfightclub.store;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.google.gson.annotations.SerializedName;
 
+@Entity(tableName = "transformers_table")
 public class Transformer {
 
+    @PrimaryKey
+    @NonNull
     @SerializedName("id")
     private String id;
 
@@ -52,7 +59,7 @@ public class Transformer {
     }
 
     public String getName() {
-        return name.replace("_"," ");
+        return name.replace("_", " ");
     }
 
     public void setName(String name) {
@@ -140,11 +147,28 @@ public class Transformer {
     }
 
     public int getRating() {
-        return strength+intelligence+speed+endurance+firepower;
+        return strength + intelligence + speed + endurance + firepower;
     }
 
     public String getImageUrl() {
-        return "https://www.ntfa.net/ntfa/techspecs/g1specs/"+name+".jpg";
+        return "https://www.ntfa.net/ntfa/techspecs/g1specs/" + name + ".jpg";
     }
 
+    @Override
+    public String toString() {
+        return "Transformer{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", team='" + team + '\'' +
+                ", strength=" + strength +
+                ", intelligence=" + intelligence +
+                ", speed=" + speed +
+                ", endurance=" + endurance +
+                ", rank=" + rank +
+                ", courage=" + courage +
+                ", firepower=" + firepower +
+                ", skill=" + skill +
+                ", teamIcon='" + teamIcon + '\'' +
+                '}';
+    }
 }

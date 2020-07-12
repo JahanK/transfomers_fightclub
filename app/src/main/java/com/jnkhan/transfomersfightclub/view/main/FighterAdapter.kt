@@ -1,4 +1,4 @@
-package com.jnkhan.transfomersfightclub.view.adapters
+package com.jnkhan.transfomersfightclub.view.main
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -20,15 +20,21 @@ import com.google.android.material.textview.MaterialTextView
 import com.jnkhan.transfomersfightclub.R
 import com.jnkhan.transfomersfightclub.store.Transformer
 
-class SelectionAdapter(var context: Context, var transformers: ArrayList<Transformer>, val onClick : (Transformer) -> Unit) :
-        RecyclerView.Adapter<SelectionAdapter.TransformerHolder>() {
+class FighterAdapter(
+    var context: Context,
+    var transformers: List<Transformer>,
+    val onTransformerDeletion: (Transformer) -> Unit
+) :
+    RecyclerView.Adapter<FighterAdapter.TransformerHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransformerHolder {
 
         val transformerHolder = LayoutInflater.from(parent.context)
             .inflate(R.layout.listitem_transformer, parent, false)
 
-        return TransformerHolder(transformerHolder)
+        return TransformerHolder(
+            transformerHolder
+        )
     }
 
     override fun getItemCount(): Int {
@@ -39,44 +45,30 @@ class SelectionAdapter(var context: Context, var transformers: ArrayList<Transfo
 
         var transformer = transformers.get(position)
 
-        holder.card.setOnClickListener { onClick(transformer) }
+        holder.nam.text = transformer.name.replace("_", " ")
 
-        holder.nam.text = transformer.name.replace("_"," ")
-
-        holder.str.text = (context.getString(R.string.listitem_strength) + " " + transformer.strength)
-        holder.ntl.text = (context.getString(R.string.listitem_intelligence) + " " + transformer.intelligence)
+        holder.str.text =
+            (context.getString(R.string.listitem_strength) + " " + transformer.strength)
+        holder.ntl.text =
+            (context.getString(R.string.listitem_intelligence) + " " + transformer.intelligence)
         holder.spd.text = (context.getString(R.string.listitem_speed) + " " + transformer.speed)
-        holder.end.text = (context.getString(R.string.listitem_endurance) + " " + transformer.endurance)
+        holder.end.text =
+            (context.getString(R.string.listitem_endurance) + " " + transformer.endurance)
         holder.rnk.text = (context.getString(R.string.listitem_rank) + " " + transformer.rank)
         holder.crg.text = (context.getString(R.string.listitem_courage) + " " + transformer.courage)
-        holder.fpr.text = (context.getString(R.string.listitem_firepower) + " " + transformer.firepower)
+        holder.fpr.text =
+            (context.getString(R.string.listitem_firepower) + " " + transformer.firepower)
         holder.skl.text = (context.getString(R.string.listitem_skill) + " " + transformer.skill)
 
-        holder.button.visibility = View.GONE
-        holder.image.setImageResource(if (transformer.team.compareTo("A")==0) R.drawable.svg_autobots else R.drawable.svg_decepticons)
+        holder.image.setImageResource(if (transformer.team.compareTo("A") == 0) R.drawable.svg_autobots else R.drawable.svg_decepticons)
         holder.rtg.text = (context.getString(R.string.listItem_rating) + " " + transformer.rating)
 
+        holder.delete.setOnClickListener {onTransformerDeletion(transformer)}
+
+        Glide.with(context).load(Uri.parse(transformer.teamIcon)).into(holder.icon)
+
         Glide.with(context)
-            .asBitmap()
-            .load(Uri.parse(transformer.imageUrl))
-            .listener(object : RequestListener<Bitmap> {
-                override fun onResourceReady(resource: Bitmap?, model: Any?, target: Target<Bitmap>?,
-                    dataSource: DataSource?, isFirstResource: Boolean): Boolean {
-                    if(resource==null) return false
-
-                    var palette = Palette.from(resource).generate()
-                    var swatch = palette.getLightVibrantColor(palette.getMutedColor(context.resources.getColor(R.color.colorPrimary)))
-                    holder.card.setCardBackgroundColor(swatch)
-
-                    return false
-                }
-
-                override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Bitmap>?,
-                    isFirstResource: Boolean): Boolean {
-                    return false
-                }
-
-            })
+            .load(Uri.parse(transformer.imageUrl.replace(" ", "_")))
             .into(holder.image)
     }
 
@@ -98,6 +90,6 @@ class SelectionAdapter(var context: Context, var transformers: ArrayList<Transfo
         var rnk = listItem.findViewById<MaterialTextView>(R.id.listitem_transformer_rank);
 
         var icon = listItem.findViewById<ImageView>(R.id.listitem_transformer_icon)
-        var button = listItem.findViewById<ImageButton>(R.id.listitem_transformer_recycle)
+        var delete = listItem.findViewById<ImageButton>(R.id.listitem_transformer_recycle)
     }
 }

@@ -5,14 +5,18 @@ import android.content.Context
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.viewModelScope
 import com.jnkhan.transfomersfightclub.store.Transformer
+import com.jnkhan.transfomersfightclub.store.TransformerDatabase
+import com.jnkhan.transfomersfightclub.store.TransformerRepository
 import com.jnkhan.transfomersfightclub.store.TransformersResponse
 import com.jnkhan.transfomersfightclub.utilities.ApiAllSpark
 import com.jnkhan.transfomersfightclub.utilities.ClientAllSpark
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import okhttp3.ResponseBody
 import retrofit2.Call
-import java.util.*
 import retrofit2.Callback
 import retrofit2.Response
 
@@ -21,31 +25,27 @@ class TFCViewModel(application: Application) : AndroidViewModel(application) {
     companion object {
         val AUTOBOT_CHARACTER = "A"
         val DECEPTICON_CHARACTER = "D"
+        val SYNC_ADD = "add"
+        val SYNC_DELETE = "del"
+        val SYNC_UPDATE = "upd"
     }
-
-    private var appbarCollapsed = false
-        get
-        set
 
     private val TAG_TFCVIEWMODE_ERROR = "ERROR TFCVIEWMODEL"
     private val VALUE_PREFERENCES_KEY = "prefs"
     private val VALUE_AUTH_PREFIX = "Bearer "
     private val VALUE_AUTH_TOKEN_KEY = "authentication"
-    private val SYNC_ADD = "add"
-    private val SYNC_DELETE = "del"
-    private val SYNC_UPDATE = "upd"
 
     /**
-     * Autobot and decepticon team lists along with their MutableLiveData objects
-     * The sets are sorted by transformer rating
+     * Gets all transformers livedata object from the transformers_table from Transformers repository.
      */
-    private val autobots =
-        TreeSet<Transformer>(Comparator<Transformer> { a, b -> (a.rating - b.rating) })
-    private val autobotMutableLiveData = MutableLiveData<TreeSet<Transformer>>(autobots)
+    private val repository: TransformerRepository
+    val fighters: LiveData<List<Transformer>>
 
-    private val decepticons =
-        TreeSet<Transformer>(Comparator<Transformer> { a, b -> (a.rating - b.rating) })
-    private val decepticonMutableLiveData = MutableLiveData<TreeSet<Transformer>>(decepticons)
+    init {
+        repository =
+            TransformerRepository(TransformerDatabase.getDatabase(application).transformerDao())
+        fighters = repository.allTransformers
+    }
 
     /**
      * AllSpark retrofit client, used for all API calls
@@ -55,25 +55,26 @@ class TFCViewModel(application: Application) : AndroidViewModel(application) {
     /**
      * Authentication token with synchronized accessors
      */
-    private var token: String? = null
-    private fun getAuthToken(): String? {
+    private lateinit var token: String
+    private fun getAuthToken(): String {
         synchronized(this) { return token }
     }
 
-    private fun setAuthToken(value: String?) {
+    private fun setAuthToken(value: String) {
         synchronized(this) { token = value }
     }
 
     /**
-     * Acquires saved authentication token from sharedpreferences or online if no previous token exists
+     * Acquires saved authentication token from sharedpreferences or online if no previous token exists.
+     * Also calls populateTransformers after initializing token.
      */
     init {
+
         val prefs = application.getSharedPreferences(VALUE_PREFERENCES_KEY, Context.MODE_PRIVATE)
+        prefs.getString(VALUE_AUTH_TOKEN_KEY, "")?.let { setAuthToken(it) }
 
-        setAuthToken(prefs.getString(VALUE_AUTH_TOKEN_KEY, ""))
-
-        if (getAuthToken() == null || getAuthToken()?.length == 0) {
-            clientAllSpark.authToken.enqueue(object : Callback<ResponseBody> {
+        if (getAuthToken().isEmpty()) {
+            clientAllSpark.getAuthenticationToken().enqueue(object : Callback<ResponseBody> {
 
                 override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                     errorToast("init -> authToken", t)
@@ -83,7 +84,7 @@ class TFCViewModel(application: Application) : AndroidViewModel(application) {
                     call: Call<ResponseBody>,
                     response: Response<ResponseBody>
                 ) {
-                    setAuthToken(response.body()?.string())
+                    setAuthToken(response.body()!!.string())
 
                     with(prefs.edit()) {
                         putString(VALUE_AUTH_TOKEN_KEY, getAuthToken())
@@ -94,46 +95,44 @@ class TFCViewModel(application: Application) : AndroidViewModel(application) {
         }
 
         populateTransformers()
+
     }
 
     /**
-     * Populates transformers from AllSpark Server
+     * Gets all transformers from AllSpark Server and updates local transformers accordingly.
+     * This makes the AllSpark Server the source of truth.
      */
     private fun populateTransformers() {
 
-        if (getAuthToken() != null) {
-            clientAllSpark.getTransformers(VALUE_AUTH_PREFIX + getAuthToken())
-                .enqueue(object : Callback<TransformersResponse> {
+        clientAllSpark.getTransformers(VALUE_AUTH_PREFIX + getAuthToken())
+            .enqueue(object : Callback<TransformersResponse> {
 
-                    override fun onFailure(call: Call<TransformersResponse>, t: Throwable) {
-                        errorToast("populateTransformers -> getTransformers", t)
-                    }
+                override fun onFailure(call: Call<TransformersResponse>, t: Throwable) {
+                    errorToast("populateTransformers -> getTransformers", t)
+                }
 
-                    override fun onResponse(
-                        call: Call<TransformersResponse>,
-                        response: Response<TransformersResponse>
-                    ) {
-                        var list = response.body()!!.transformers
+                override fun onResponse(
+                    call: Call<TransformersResponse>,
+                    response: Response<TransformersResponse>
+                ) {
+                    val list = response.body()!!.transformers
 
+                    viewModelScope.launch(Dispatchers.IO) {
                         for (transformer in list) {
-                            Log.e(TAG_TFCVIEWMODE_ERROR, transformer.name.toString())
-                            if (transformer.team.compareTo(AUTOBOT_CHARACTER) == 0)
-                                autobots.add(transformer)
-                            else
-                                decepticons.add(transformer)
-
+                            repository.insert(transformer)
                         }
                     }
+                }
 
-                })
-        }
+            })
     }
 
     /**
-     * Adds transformer to their respective list after communicating with AllSpark to register transformer
+     * Server and repository manipulation functions
      */
     fun addATransformer(transformer: Transformer) {
 
+        //Adds to server
         clientAllSpark.createTransformer(VALUE_AUTH_PREFIX + token, transformer)
             .enqueue(object : Callback<Transformer> {
 
@@ -142,8 +141,11 @@ class TFCViewModel(application: Application) : AndroidViewModel(application) {
 
                 }
 
-                override fun onResponse(call: Call<Transformer>, response: Response<Transformer>) {
-                    var newTransformer = response.body()
+                override fun onResponse(
+                    call: Call<Transformer>,
+                    response: Response<Transformer>
+                ) {
+                    val newTransformer = response.body()
 
                     transformer.apply {
                         if (newTransformer != null) {
@@ -153,22 +155,58 @@ class TFCViewModel(application: Application) : AndroidViewModel(application) {
                         }
                     }
 
-                    if (transformer.team.compareTo(AUTOBOT_CHARACTER) == 0)
-                        autobots.add(transformer)
-                    else
-                        decepticons.add(transformer)
+                    //Adds to local
+                    viewModelScope.launch(Dispatchers.IO) {
+                        repository.insert(transformer)
+                    }
                 }
+            })
+
+    }
+
+    fun deleteTransformer(transformer: Transformer) {
+        //Deletes from server
+        clientAllSpark.deleteTransformer(VALUE_AUTH_PREFIX + getAuthToken(), transformer.id)
+            .enqueue(object : Callback<ResponseBody> {
+                override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+                    errorToast("deleteTransformer", t)
+                }
+
+                override fun onResponse(
+                    call: Call<ResponseBody>,
+                    response: Response<ResponseBody>
+                ) {
+                    //Deletes from local
+                    viewModelScope.launch(Dispatchers.IO) {
+                        repository.delete(transformer)
+                    }
+
+                }
+
+            })
+    }
+
+    fun updateTransformer(transformer: Transformer) {
+        //Updates server
+        clientAllSpark.updateTransformer(VALUE_AUTH_PREFIX + getAuthToken(), transformer)
+            .enqueue(object : Callback<Transformer> {
+                override fun onFailure(call: Call<Transformer>, t: Throwable) {
+                    errorToast("updateTransformer", t)
+                }
+
+                override fun onResponse(call: Call<Transformer>, response: Response<Transformer>) {
+                    //Updates local
+                    viewModelScope.launch(Dispatchers.IO) {
+                        repository.update(transformer)
+                    }
+                }
+
             })
     }
 
     private fun errorToast(error: String, t: Throwable) {
         Toast.makeText(getApplication(), error, Toast.LENGTH_SHORT).show()
+        Log.e(TAG_TFCVIEWMODE_ERROR, "Error: $error")
         Log.e(TAG_TFCVIEWMODE_ERROR, "Error: $t")
-        Log.e(TAG_TFCVIEWMODE_ERROR, "Error: ${t.printStackTrace()}")
-    }
-
-    private fun synchronizedOperations(operation: String, transformer: Transformer) {
-        synchronized(this) {
-        }
     }
 }

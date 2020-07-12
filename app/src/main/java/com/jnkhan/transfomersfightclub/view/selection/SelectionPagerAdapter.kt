@@ -1,4 +1,4 @@
-package com.jnkhan.transfomersfightclub.view.ui.main
+package com.jnkhan.transfomersfightclub.view.selection
 
 import android.content.Context
 import androidx.fragment.app.Fragment
@@ -25,7 +25,9 @@ class SelectionPagerAdapter(private val context: Context, fm: FragmentManager) :
     override fun getItem(position: Int): Fragment {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        return SelectionFragment.newInstance(position)
+        return SelectionFragment.newInstance(
+            position
+        )
     }
 
     override fun getPageTitle(position: Int): CharSequence? {

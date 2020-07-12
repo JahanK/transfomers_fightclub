@@ -1,4 +1,4 @@
-package com.jnkhan.transfomersfightclub.view.adapters
+package com.jnkhan.transfomersfightclub.view.selection
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -20,15 +20,17 @@ import com.google.android.material.textview.MaterialTextView
 import com.jnkhan.transfomersfightclub.R
 import com.jnkhan.transfomersfightclub.store.Transformer
 
-class FighterAdapter(var context: Context, var transformers: ArrayList<Transformer>, val onClick : (Transformer) -> Unit) :
-        RecyclerView.Adapter<FighterAdapter.TransformerHolder>() {
+class SelectionAdapter(var context: Context, var transformers: ArrayList<Transformer>, val onClick : (Transformer) -> Unit) :
+        RecyclerView.Adapter<SelectionAdapter.TransformerHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransformerHolder {
 
         val transformerHolder = LayoutInflater.from(parent.context)
             .inflate(R.layout.listitem_transformer, parent, false)
 
-        return TransformerHolder(transformerHolder)
+        return TransformerHolder(
+            transformerHolder
+        )
     }
 
     override fun getItemCount(): Int {
@@ -64,8 +66,8 @@ class FighterAdapter(var context: Context, var transformers: ArrayList<Transform
                     dataSource: DataSource?, isFirstResource: Boolean): Boolean {
                     if(resource==null) return false
 
-                    var palette = Palette.from(resource).generate()
-                    var swatch = palette.getLightVibrantColor(palette.getMutedColor(context.resources.getColor(R.color.colorPrimary)))
+                    val palette = Palette.from(resource).generate()
+                    val swatch = palette.getLightVibrantColor(palette.getMutedColor(context.resources.getColor(R.color.colorPrimary)))
                     holder.card.setCardBackgroundColor(swatch)
 
                     return false
