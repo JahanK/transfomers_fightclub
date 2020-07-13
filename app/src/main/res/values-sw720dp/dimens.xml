@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <dimen name="fab_battle_margin_bottom">132dp</dimen>
     <integer name="recycler_columns">2</integer>
 </resources>

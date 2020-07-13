@@ -25,7 +25,7 @@ import com.jnkhan.transfomersfightclub.viewmodel.TfcViewModel
 
 class FighterAdapter(
     var context: Context,
-    val onTransformerDeletion: (Transformer) -> Unit
+    val onActionTaken: (Int, Transformer) -> Unit
 ) :
     RecyclerView.Adapter<FighterAdapter.TransformerHolder>() {
 
@@ -70,7 +70,9 @@ class FighterAdapter(
 
         holder.rtg.text = transformer.rating.toString()
 
-        holder.delete.setOnClickListener {onTransformerDeletion(transformer)}
+        holder.delete.setOnClickListener {onActionTaken(MainActivity.VALUE_DELETE, transformer)}
+        holder.edit.setOnClickListener {onActionTaken(MainActivity.VALUE_EDIT, transformer)}
+        holder.main.setOnClickListener {onActionTaken(MainActivity.VALUE_EDIT, transformer)}
 
         Glide.with(context).load(Uri.parse(transformer.teamIcon)).into(holder.icon)
 

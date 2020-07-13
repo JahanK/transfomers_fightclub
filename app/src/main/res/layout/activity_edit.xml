@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/listitem_transformer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:layout_gravity="center_horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/listitem_transformer_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/listitem_transformer_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="8dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listitem_transformer_title_container">
+
+            <ImageView
+                android:id="@+id/listitem_transformer_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp" />
+
+            <ImageView android:id="@+id/listitem_transformer_icon"
+                android:layout_width="@dimen/listitem_transformer_team_icon_size"
+                android:layout_height="@dimen/listitem_transformer_team_icon_size"
+                android:layout_gravity="top|start"
+                android:layout_margin="8dp"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/listitem_transformer_rating_text"
+                style="@style/ListItemTransformerTextAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/listItem_rating"
+
+                android:layout_marginBottom="8dp"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/listitem_transformer_rating"
+                style="@style/ListItemTransformerTextAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+
+                android:textColor="@color/colorPrimaryDark"
+
+                android:text="10.0"
+
+                android:layout_marginBottom="8dp"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/listitem_transformer_navigate_up"
+            android:layout_width="@dimen/listitem_transformer_fab_size"
+            android:layout_height="@dimen/listitem_transformer_fab_size"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/svg_back"
+
+            app:backgroundTint="@color/colorListitemBack"
+            app:fabCustomSize="@dimen/listitem_transformer_fab_size"
+            app:layout_constraintBottom_toBottomOf="@id/listitem_transformer_title_container"
+
+            app:layout_constraintEnd_toStartOf="@+id/listitem_transformer_save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:maxImageSize="@dimen/listitem_transformer_fab_image_size" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/listitem_transformer_save"
+            android:layout_width="@dimen/listitem_transformer_fab_size"
+            android:layout_height="@dimen/listitem_transformer_fab_size"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/svg_save"
+
+            app:backgroundTint="@color/colorListitemSave"
+            app:fabCustomSize="@dimen/listitem_transformer_fab_size"
+            app:layout_constraintBottom_toBottomOf="@id/listitem_transformer_title_container"
+
+            app:layout_constraintEnd_toStartOf="@id/listitem_transformer_title_container"
+            app:layout_constraintStart_toEndOf="@id/listitem_transformer_navigate_up"
+            app:layout_constraintTop_toTopOf="parent"
+            app:maxImageSize="@dimen/listitem_transformer_fab_image_size" />
+
+        <LinearLayout
+            android:id="@+id/listitem_transformer_title_container"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/listitem_transformer_title_height"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/listitem_transformer_edit"
+
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/listitem_transformer_save"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/listitem_transformer_title"
+                style="@style/ListItemTransformerTitleAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+
+                android:text="@string/listitem_transformer_title_placeholder" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/listitem_transformer_subtitle"
+                style="@style/ListItemTransformerSubTextAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+
+                android:text="@string/listitem_transformer_subtitle_placeholder" />
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/listitem_transformer_edit"
+            android:layout_width="@dimen/listitem_transformer_fab_size"
+            android:layout_height="@dimen/listitem_transformer_fab_size"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/svg_edit"
+            android:visibility="gone"
+
+            app:backgroundTint="@color/colorListitemEdit"
+            app:fabCustomSize="@dimen/listitem_transformer_fab_size"
+            app:layout_constraintBottom_toBottomOf="@id/listitem_transformer_title_container"
+
+            app:layout_constraintEnd_toStartOf="@id/listitem_transformer_delete"
+            app:layout_constraintStart_toEndOf="@id/listitem_transformer_title_container"
+            app:layout_constraintTop_toTopOf="parent"
+            app:maxImageSize="@dimen/listitem_transformer_fab_image_size" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/listitem_transformer_delete"
+            android:layout_width="@dimen/listitem_transformer_fab_size"
+            android:layout_height="@dimen/listitem_transformer_fab_size"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/svg_delete"
+            android:visibility="gone"
+
+            app:backgroundTint="@color/colorListitemDelete"
+            app:fabCustomSize="@dimen/listitem_transformer_fab_size"
+            app:layout_constraintBottom_toBottomOf="@id/listitem_transformer_title_container"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/listitem_transformer_edit"
+            app:layout_constraintTop_toTopOf="parent"
+            app:maxImageSize="@dimen/listitem_transformer_fab_image_size" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/listitem_transformer_strength_text"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/listitem_strength"
+
+            app:layout_constraintTop_toBottomOf="@id/listitem_transformer_image_container"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/listitem_transformer_strength"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginEnd="16dp"
+            android:entries="@array/array_attribute_level"
+
+            app:layout_constraintTop_toTopOf="@id/listitem_transformer_strength_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/listitem_transformer_intelligence_text"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginTop="16dp"
+            android:text="@string/listitem_intelligence"
+
+            app:layout_constraintTop_toBottomOf="@id/listitem_transformer_strength_text"
+            app:layout_constraintStart_toStartOf="@id/listitem_transformer_strength_text"
+            />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/listitem_transformer_intelligence"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginEnd="16dp"
+            android:entries="@array/array_attribute_level"
+
+            app:layout_constraintTop_toTopOf="@id/listitem_transformer_intelligence_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/listitem_transformer_speed_text"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginTop="16dp"
+            android:text="@string/listitem_speed"
+
+            app:layout_constraintTop_toBottomOf="@id/listitem_transformer_intelligence_text"
+            app:layout_constraintStart_toStartOf="@id/listitem_transformer_strength_text"
+            />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/listitem_transformer_speed"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginEnd="16dp"
+            android:entries="@array/array_attribute_level"
+
+            app:layout_constraintTop_toTopOf="@id/listitem_transformer_speed_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/listitem_transformer_endurance_text"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginTop="16dp"
+            android:text="@string/listitem_endurance"
+
+            app:layout_constraintTop_toBottomOf="@id/listitem_transformer_speed_text"
+            app:layout_constraintStart_toStartOf="@id/listitem_transformer_strength_text"
+            />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/listitem_transformer_endurance"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginEnd="16dp"
+            android:entries="@array/array_attribute_level"
+
+            app:layout_constraintTop_toTopOf="@id/listitem_transformer_endurance_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/listitem_transformer_rank_text"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginTop="16dp"
+            android:text="@string/listitem_rank"
+
+            app:layout_constraintTop_toBottomOf="@id/listitem_transformer_endurance_text"
+            app:layout_constraintStart_toStartOf="@id/listitem_transformer_strength_text"
+            />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/listitem_transformer_rank"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginEnd="16dp"
+            android:entries="@array/array_attribute_level"
+
+            app:layout_constraintTop_toTopOf="@id/listitem_transformer_rank_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/listitem_transformer_courage_text"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginTop="16dp"
+            android:text="@string/listitem_courage"
+
+            app:layout_constraintTop_toBottomOf="@id/listitem_transformer_rank_text"
+            app:layout_constraintStart_toStartOf="@id/listitem_transformer_strength_text"
+            />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/listitem_transformer_courage"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginEnd="16dp"
+            android:entries="@array/array_attribute_level"
+
+            app:layout_constraintTop_toTopOf="@id/listitem_transformer_courage_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/listitem_transformer_firepower_text"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginTop="16dp"
+            android:text="@string/listitem_firepower"
+
+            app:layout_constraintTop_toBottomOf="@id/listitem_transformer_courage_text"
+            app:layout_constraintStart_toStartOf="@id/listitem_transformer_strength_text"
+            />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/listitem_transformer_firepower"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginEnd="16dp"
+            android:entries="@array/array_attribute_level"
+
+            app:layout_constraintTop_toTopOf="@id/listitem_transformer_firepower_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/listitem_transformer_skill_text"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginTop="16dp"
+            android:text="@string/listitem_skill"
+
+            app:layout_constraintTop_toBottomOf="@id/listitem_transformer_firepower_text"
+            app:layout_constraintStart_toStartOf="@id/listitem_transformer_strength_text"
+            />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/listitem_transformer_skill"
+            style="@style/ListItemTransformerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_weight="1"
+
+            android:layout_marginEnd="16dp"
+            android:entries="@array/array_attribute_level"
+
+            app:layout_constraintTop_toTopOf="@id/listitem_transformer_skill_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

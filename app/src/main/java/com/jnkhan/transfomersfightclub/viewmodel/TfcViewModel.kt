@@ -2,11 +2,15 @@ package com.jnkhan.transfomersfightclub.viewmodel
 
 import android.app.Application
 import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
+import android.os.Build
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.jnkhan.transfomersfightclub.R
 import com.jnkhan.transfomersfightclub.store.Transformer
 import com.jnkhan.transfomersfightclub.store.TransformerDatabase
 import com.jnkhan.transfomersfightclub.store.TransformerRepository
@@ -101,6 +105,15 @@ class TfcViewModel(application: Application) : AndroidViewModel(application) {
      */
     private fun populateTransformers() {
 
+        if (!checkInternet()) {
+            Toast.makeText(
+                getApplication(),
+                getApplication<Application>().getString(R.string.no_internet_connection),
+                Toast.LENGTH_SHORT
+            ).show()
+            return
+        }
+
         clientAllSpark.getTransformers(VALUE_AUTH_PREFIX + getAuthToken())
             .enqueue(object : Callback<TransformersResponse> {
 
@@ -153,12 +166,11 @@ class TfcViewModel(application: Application) : AndroidViewModel(application) {
                         }
                     }
 
-
                     //Adds to local
                     viewModelScope.launch(Dispatchers.IO) {
-
                         repository.insert(transformer)
                     }
+
                 }
             })
     }
@@ -181,11 +193,12 @@ class TfcViewModel(application: Application) : AndroidViewModel(application) {
                     }
 
                 }
-
             })
     }
 
     fun updateTransformer(transformer: Transformer) {
+
+
         //Updates server
         clientAllSpark.updateTransformer(VALUE_AUTH_PREFIX + getAuthToken(), transformer)
             .enqueue(object : Callback<Transformer> {
@@ -203,8 +216,18 @@ class TfcViewModel(application: Application) : AndroidViewModel(application) {
             })
     }
 
+    fun checkInternet(): Boolean {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            val service = Context.CONNECTIVITY_SERVICE
+            val manager = getApplication<Application>().getSystemService(service) as ConnectivityManager?
+            val network = manager?.activeNetworkInfo?.isConnected
+            return network ?: false
+        }
+        return false
+    }
+
     private fun errorToast(error: String, t: Throwable) {
-        Toast.makeText(getApplication(), error, Toast.LENGTH_SHORT).show()
         Log.e(TAG_TFCVIEWMODE_ERROR, "Error: $error")
         Log.e(TAG_TFCVIEWMODE_ERROR, "Error: $t")
     }

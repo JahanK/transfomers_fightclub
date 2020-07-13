@@ -1,9 +1,11 @@
 package com.jnkhan.transfomersfightclub.view.selection
 
+import android.app.Application
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
@@ -29,8 +31,10 @@ class SelectionFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_selection, container, false)
 
+        /**
+         * Sets up the team tabs and their respective transformers
+         */
         val team = arguments?.get(TEAM)
-
         var arrayResourceId = R.array.stats_autobots
         var teamSymbol = TfcViewModel.AUTOBOT_CHARACTER
         if (SelectionPagerAdapter.VALUE_AUTOBOTS != team) {
@@ -38,6 +42,9 @@ class SelectionFragment : Fragment() {
             teamSymbol = TfcViewModel.DECEPTICON_CHARACTER
         }
 
+        /**
+         * Converts stored JSON versions of transformers to object versions
+         */
         val gson = Gson();
         for (transformer in resources.getStringArray(arrayResourceId)) {
             transformers.add(
@@ -46,24 +53,46 @@ class SelectionFragment : Fragment() {
         }
 
         val recyclerView = root.findViewById<RecyclerView>(R.id.selection_grid)
-
-        val gridManager = GridLayoutManager(this.activity, 1, LinearLayoutManager.VERTICAL, false)
+        val gridManager = GridLayoutManager(
+            this.activity,
+            resources.getInteger(R.integer.recycler_columns),
+            LinearLayoutManager.VERTICAL,
+            false
+        )
 
         recyclerView.layoutManager = gridManager
 
         if (context != null)
             recyclerView.adapter =
-                SelectionAdapter(context!!.applicationContext, transformers)
+                SelectionAdapter(requireContext().applicationContext, transformers)
                 { selection -> onClick(selection) }
 
         return root
     }
 
     fun onClick(transformer: Transformer) {
-        val viewModel = ViewModelProvider(this, TfcViewModelFactory(this.activity!!.application)).get(TfcViewModel::class.java)
+
+        val viewModel =
+            ViewModelProvider(this, TfcViewModelFactory(this.requireActivity().application)).get(
+                TfcViewModel::class.java
+            )
+
+        if (!viewModel.checkInternet()) {
+            Toast.makeText(
+                this.context,
+                getString(R.string.no_internet_connection),
+                Toast.LENGTH_SHORT
+            ).show()
+            return
+        }
+
         viewModel.addATransformer(transformer)
 
-        activity?.finish()
+        Toast.makeText(
+            this.context,
+            transformer.name + " " + this.getString(R.string.added),
+            Toast.LENGTH_SHORT
+        ).show()
     }
 
     companion object {
