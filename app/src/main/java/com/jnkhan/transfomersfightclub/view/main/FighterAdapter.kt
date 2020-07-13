@@ -3,12 +3,14 @@ package com.jnkhan.transfomersfightclub.view.main
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -19,13 +21,20 @@ import com.bumptech.glide.request.target.Target
 import com.google.android.material.textview.MaterialTextView
 import com.jnkhan.transfomersfightclub.R
 import com.jnkhan.transfomersfightclub.store.Transformer
+import com.jnkhan.transfomersfightclub.viewmodel.TfcViewModel
 
 class FighterAdapter(
     var context: Context,
-    var transformers: List<Transformer>,
     val onTransformerDeletion: (Transformer) -> Unit
 ) :
     RecyclerView.Adapter<FighterAdapter.TransformerHolder>() {
+
+    private var transformers = ArrayList<Transformer>()
+
+    fun setTransformers(transformers : ArrayList<Transformer>) {
+        this.transformers=transformers
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransformerHolder {
 
@@ -46,38 +55,60 @@ class FighterAdapter(
         var transformer = transformers.get(position)
 
         holder.nam.text = transformer.name.replace("_", " ")
+        holder.team.text =
+            if(transformer.team.compareTo(TfcViewModel.AUTOBOT_CHARACTER)==0) context.getString(R.string.listitem_allegience_autobot)
+            else context.getString(R.string.listitem_allegience_decepticon)
 
-        holder.str.text =
-            (context.getString(R.string.listitem_strength) + " " + transformer.strength)
-        holder.ntl.text =
-            (context.getString(R.string.listitem_intelligence) + " " + transformer.intelligence)
-        holder.spd.text = (context.getString(R.string.listitem_speed) + " " + transformer.speed)
-        holder.end.text =
-            (context.getString(R.string.listitem_endurance) + " " + transformer.endurance)
-        holder.rnk.text = (context.getString(R.string.listitem_rank) + " " + transformer.rank)
-        holder.crg.text = (context.getString(R.string.listitem_courage) + " " + transformer.courage)
-        holder.fpr.text =
-            (context.getString(R.string.listitem_firepower) + " " + transformer.firepower)
-        holder.skl.text = (context.getString(R.string.listitem_skill) + " " + transformer.skill)
+        holder.str.text = transformer.strength.toString()
+        holder.ntl.text = transformer.intelligence.toString()
+        holder.spd.text = transformer.speed.toString()
+        holder.end.text = transformer.endurance.toString()
+        holder.rnk.text = transformer.rank.toString()
+        holder.crg.text = transformer.courage.toString()
+        holder.fpr.text = transformer.firepower.toString()
+        holder.skl.text = transformer.skill.toString()
 
-        holder.image.setImageResource(if (transformer.team.compareTo("A") == 0) R.drawable.svg_autobots else R.drawable.svg_decepticons)
-        holder.rtg.text = (context.getString(R.string.listItem_rating) + " " + transformer.rating)
+        holder.rtg.text = transformer.rating.toString()
 
         holder.delete.setOnClickListener {onTransformerDeletion(transformer)}
 
         Glide.with(context).load(Uri.parse(transformer.teamIcon)).into(holder.icon)
 
         Glide.with(context)
-            .load(Uri.parse(transformer.imageUrl.replace(" ", "_")))
+            .asBitmap()
+            .load(Uri.parse(transformer.imageUrl.replace(" ","_")))
+            .listener(object : RequestListener<Bitmap> {
+                override fun onResourceReady(
+                    resource: Bitmap?, model: Any?, target: Target<Bitmap>?,
+                    dataSource: DataSource?, isFirstResource: Boolean
+                ): Boolean {
+                    if (resource == null) return false
+
+                    val palette = Palette.from(resource).generate()
+                    val swatch = palette.getLightVibrantColor(palette.getMutedColor(0))
+                    holder.main.setBackgroundColor(swatch)
+
+                    return false
+                }
+
+                override fun onLoadFailed(
+                    e: GlideException?, model: Any?, target: Target<Bitmap>?,
+                    isFirstResource: Boolean
+                ): Boolean {
+                    return false
+                }
+
+            })
             .into(holder.image)
     }
 
     class TransformerHolder(listItem: View) : RecyclerView.ViewHolder(listItem) {
 
-        var card = listItem.findViewById<CardView>(R.id.listitem_transformer)
+        var main = listItem.findViewById<ConstraintLayout>(R.id.listitem_transformer_container)
 
         var image = listItem.findViewById<ImageView>(R.id.listitem_transformer_image)
-        var nam = listItem.findViewById<MaterialTextView>(R.id.listitem_transformer_name)
+        var nam = listItem.findViewById<MaterialTextView>(R.id.listitem_transformer_title)
+        var team = listItem.findViewById<MaterialTextView>(R.id.listitem_transformer_subtitle)
         var rtg = listItem.findViewById<MaterialTextView>(R.id.listitem_transformer_rating)
 
         var str = listItem.findViewById<MaterialTextView>(R.id.listitem_transformer_strength)
@@ -90,6 +121,7 @@ class FighterAdapter(
         var rnk = listItem.findViewById<MaterialTextView>(R.id.listitem_transformer_rank);
 
         var icon = listItem.findViewById<ImageView>(R.id.listitem_transformer_icon)
-        var delete = listItem.findViewById<ImageButton>(R.id.listitem_transformer_recycle)
+        var edit = listItem.findViewById<ImageButton>(R.id.listitem_transformer_edit)
+        var delete = listItem.findViewById<ImageButton>(R.id.listitem_transformer_delete)
     }
 }

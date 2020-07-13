@@ -3,14 +3,16 @@
     <string name="menu_item_battle">Start Battle</string>
     <string name="snackbar_empty">Add some transformers first</string>
 
-    <string name="listitem_strength">ST</string>
-    <string name="listitem_intelligence">IN</string>
-    <string name="listitem_speed">SP</string>
-    <string name="listitem_endurance">EN</string>
-    <string name="listitem_rank">RK</string>
-    <string name="listitem_courage">CG</string>
-    <string name="listitem_firepower">FP</string>
-    <string name="listitem_skill">SK</string>
+    <string name="listitem_allegience_autobot">Autobot</string>
+    <string name="listitem_allegience_decepticon">Decepticon</string>
+    <string name="listitem_strength">Strength</string>
+    <string name="listitem_intelligence">Intelligenc:</string>
+    <string name="listitem_speed">Speed</string>
+    <string name="listitem_endurance">Endurance</string>
+    <string name="listitem_rank">Rank</string>
+    <string name="listitem_courage">Courage</string>
+    <string name="listitem_firepower">Firepower</string>
+    <string name="listitem_skill">Skill</string>
 
     <string name="listItem_rating">RATING</string>
 
@@ -20,6 +22,8 @@
     <string name="activity_selection_subtitle">Select a transformer</string>
     <string name="team_text_1">Autobots</string>
     <string name="team_text_2">Decepticons</string>
+    <string name="listitem_transformer_subtitle_placeholder">Allegience</string>
+    <string name="listitem_transformer_title_placeholder">TRANSFORMER</string>
 
     <string-array name="stats_autobots">
         <item>{ "id": 0, "name": "Afterburner", "team": "A", "strength": 7.0, "intelligence": 6.0, "speed": 6.0, "endurance": 6.0, "rank": 5.0, "courage": 9.0, "firepower": 7.0, "skill": 7.0 }</item>

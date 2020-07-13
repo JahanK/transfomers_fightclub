@@ -20,14 +20,11 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class TFCViewModel(application: Application) : AndroidViewModel(application) {
+class TfcViewModel(application: Application) : AndroidViewModel(application) {
 
     companion object {
         val AUTOBOT_CHARACTER = "A"
         val DECEPTICON_CHARACTER = "D"
-        val SYNC_ADD = "add"
-        val SYNC_DELETE = "del"
-        val SYNC_UPDATE = "upd"
     }
 
     private val TAG_TFCVIEWMODE_ERROR = "ERROR TFCVIEWMODEL"
@@ -115,11 +112,12 @@ class TFCViewModel(application: Application) : AndroidViewModel(application) {
                     call: Call<TransformersResponse>,
                     response: Response<TransformersResponse>
                 ) {
-                    val list = response.body()!!.transformers
-
-                    viewModelScope.launch(Dispatchers.IO) {
-                        for (transformer in list) {
-                            repository.insert(transformer)
+                    if(response.body()!=null)
+                    {
+                        viewModelScope.launch(Dispatchers.IO) {
+                            for (transformer in response.body()!!.transformers) {
+                                repository.insert(transformer)
+                            }
                         }
                     }
                 }
@@ -155,13 +153,14 @@ class TFCViewModel(application: Application) : AndroidViewModel(application) {
                         }
                     }
 
+
                     //Adds to local
                     viewModelScope.launch(Dispatchers.IO) {
+
                         repository.insert(transformer)
                     }
                 }
             })
-
     }
 
     fun deleteTransformer(transformer: Transformer) {

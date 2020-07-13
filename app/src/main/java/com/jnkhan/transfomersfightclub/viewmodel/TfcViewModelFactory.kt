@@ -4,10 +4,10 @@ import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
-class TFCViewModelFactory(val application: Application) : ViewModelProvider.Factory {
+class TfcViewModelFactory(val application: Application) : ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        if(modelClass.isAssignableFrom(TFCViewModel::class.java))
-            return TFCViewModel(application) as T
+        if(modelClass.isAssignableFrom(TfcViewModel::class.java))
+            return TfcViewModel(application) as T
 
         throw IllegalArgumentException ("Wrong dependencies")
     }

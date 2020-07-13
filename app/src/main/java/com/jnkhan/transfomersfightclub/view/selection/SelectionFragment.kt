@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.jnkhan.transfomersfightclub.R
 import com.jnkhan.transfomersfightclub.store.Transformer
-import com.jnkhan.transfomersfightclub.viewmodel.TFCViewModel
-import com.jnkhan.transfomersfightclub.viewmodel.TFCViewModelFactory
+import com.jnkhan.transfomersfightclub.viewmodel.TfcViewModel
+import com.jnkhan.transfomersfightclub.viewmodel.TfcViewModelFactory
 
 /**
  * A placeholder fragment containing a simple view.
@@ -32,10 +32,10 @@ class SelectionFragment : Fragment() {
         val team = arguments?.get(TEAM)
 
         var arrayResourceId = R.array.stats_autobots
-        var teamSymbol = TFCViewModel.AUTOBOT_CHARACTER
+        var teamSymbol = TfcViewModel.AUTOBOT_CHARACTER
         if (SelectionPagerAdapter.VALUE_AUTOBOTS != team) {
             arrayResourceId = R.array.stats_decepticons
-            teamSymbol = TFCViewModel.DECEPTICON_CHARACTER
+            teamSymbol = TfcViewModel.DECEPTICON_CHARACTER
         }
 
         val gson = Gson();
@@ -60,7 +60,7 @@ class SelectionFragment : Fragment() {
     }
 
     fun onClick(transformer: Transformer) {
-        val viewModel = ViewModelProvider(this, TFCViewModelFactory(this.activity!!.application)).get(TFCViewModel::class.java)
+        val viewModel = ViewModelProvider(this, TfcViewModelFactory(this.activity!!.application)).get(TfcViewModel::class.java)
         viewModel.addATransformer(transformer)
 
         activity?.finish()

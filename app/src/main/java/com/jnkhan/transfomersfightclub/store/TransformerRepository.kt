@@ -8,6 +8,7 @@ class TransformerRepository(private val transformerDao: TransformerDao) {
 
     fun insert(transformer: Transformer) {
         transformerDao.insert(transformer)
+        transformerDao.insert(transformer)
     }
 
     fun delete(transformer: Transformer) {
@@ -15,6 +16,7 @@ class TransformerRepository(private val transformerDao: TransformerDao) {
     }
 
     fun update(transformer: Transformer) {
+        transformerDao.update(transformer)
         transformerDao.update(transformer)
     }
 

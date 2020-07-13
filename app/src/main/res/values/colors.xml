@@ -4,6 +4,12 @@
     <color name="colorPrimaryDark">#20002E</color>
     <color name="colorAccent">#A60000</color>
 
+    <color name="colorPrimaryDarkTranluscent">#9620002E</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorTransparent">#00FFFFFF</color>
+
+    <color name="colorListitemSave">#81C341</color>
+    <color name="colorListitemBack">#C72327</color>
+    <color name="colorListitemDelete">#C72327</color>
+    <color name="colorListitemEdit">#81C341</color>
 </resources>
