@@ -13,9 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".view.battle.BattleActivity"
+            android:label="@string/title_activity_battle"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".view.edit.EditActivity"
             android:label="@string/title_activity_edit"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".view.selection.SelectionActivity"
             android:label="@string/activity_selection_title" />

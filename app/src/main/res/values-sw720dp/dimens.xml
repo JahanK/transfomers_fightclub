@@ -2,4 +2,5 @@
 <resources>
     <dimen name="fab_battle_margin_bottom">132dp</dimen>
     <integer name="recycler_columns">2</integer>
+    <integer name="results_columns">3</integer>
 </resources>

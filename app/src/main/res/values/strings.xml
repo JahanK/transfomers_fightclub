@@ -25,6 +25,24 @@
     <string name="listitem_transformer_subtitle_placeholder">Allegience</string>
     <string name="listitem_transformer_title_placeholder">TRANSFORMER</string>
 
+    <string name="title_activity_edit">EditActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="saved">Saved</string>
+    <string name="added">added</string>
+    <string name="no_internet_connection">No internet connection detected. Please connect to the internet to complete action.</string>
+    <string name="title_activity_battle">BattleActivity</string>
+    <string name="battle_tab_text_1">Winners</string>
+    <string name="battle_tab_text_2">Survivors</string>
+    <string name="battle_results_title">Battle results</string>
+    <string name="battle_results_subtitle">And the winners are...</string>
+
     <string-array name="array_attribute_level">
         <item>1</item>
         <item>2</item>
@@ -228,17 +246,5 @@
         <item>{ "id": 0, "name": "Wildrider", "team": "D", "strength": 6.0, "intelligence": 6.0, "speed": 7.0, "endurance": 6.0, "rank": 5.0, "courage": 8.0, "firepower": 7.0, "skill": 6.0 }</item>
         <item>{ "id": 0, "name": "Wingspan", "team": "D", "strength": 5.0, "intelligence": 9.0, "speed": 6.0, "endurance": 5.0, "rank": 6.0, "courage": 7.0, "firepower": 7.0, "skill": 9.0 }</item>
     </string-array>
-    <string name="title_activity_edit">EditActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="saved">Saved</string>
-    <string name="added">added</string>
-    <string name="no_internet_connection">No internet connection detected. Please connect to the internet to complete action.</string>
 
 </resources>

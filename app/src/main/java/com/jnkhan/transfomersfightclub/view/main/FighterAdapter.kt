@@ -36,6 +36,10 @@ class FighterAdapter(
         notifyDataSetChanged()
     }
 
+    fun getTransformers(): ArrayList<Transformer> {
+        return transformers
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransformerHolder {
 
         val transformerHolder = LayoutInflater.from(parent.context)

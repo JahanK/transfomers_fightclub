@@ -11,6 +11,7 @@ import com.jnkhan.transfomersfightclub.view.selection.SelectionPagerAdapter
 class SelectionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_selection)
         val selectionPagerAdapter =

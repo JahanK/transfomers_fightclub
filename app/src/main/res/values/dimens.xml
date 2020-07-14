@@ -20,4 +20,6 @@
     <dimen name="listitem_transformer_fab_image_size">16dp</dimen>
 
     <integer name="recycler_columns">1</integer>
+
+    <integer name="results_columns">1</integer>
 </resources>

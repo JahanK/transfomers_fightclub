@@ -1,11 +1,7 @@
 package com.jnkhan.transfomersfightclub.view.main
 
-import android.app.Application
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.util.Log
-import android.widget.ImageView
 import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -15,11 +11,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.google.android.material.appbar.AppBarLayout
 import com.google.gson.Gson
 import com.jnkhan.transfomersfightclub.R
 import com.jnkhan.transfomersfightclub.store.Transformer
+import com.jnkhan.transfomersfightclub.view.battle.BattleActivity
 import com.jnkhan.transfomersfightclub.view.edit.EditActivity
 import com.jnkhan.transfomersfightclub.view.selection.SelectionActivity
 import com.jnkhan.transfomersfightclub.viewmodel.TfcViewModel
@@ -57,7 +52,12 @@ class MainActivity : AppCompatActivity() {
         )
         recyclerView.layoutManager = gridManager
         adapter =
-            FighterAdapter(this.applicationContext) { action, transf -> onActionTaken(action, transf) }
+            FighterAdapter(this.applicationContext) { action, transf ->
+                onActionTaken(
+                    action,
+                    transf
+                )
+            }
         recyclerView.adapter = adapter
 
         viewModel.fighters.observe(this, Observer { transformers ->
@@ -70,9 +70,10 @@ class MainActivity : AppCompatActivity() {
         val VALUE_EDIT = 0
         val VALUE_DELETE = 1
         val KEY_TRANSFORMER_EDIT = "edit"
+        val KEY_TRANSFORMER_BATTLE = "battle"
     }
 
-    private fun onActionTaken(action : Int, transformer: Transformer) {
+    private fun onActionTaken(action: Int, transformer: Transformer) {
         when (action) {
             VALUE_EDIT -> onEditTransformer(transformer)
             VALUE_DELETE -> onDeleteTransformer(transformer)
@@ -105,8 +106,27 @@ class MainActivity : AppCompatActivity() {
     private fun setupFabBattle() {
         val fabBattle: FloatingActionButton = findViewById(R.id.fab_battle)
         fabBattle.setOnClickListener { view ->
-            Snackbar.make(view, resources.getString(R.string.snackbar_empty), Snackbar.LENGTH_LONG)
-                .show()
+
+            if (adapter.getTransformers().size == 0) {
+                Snackbar.make(
+                    view,
+                    resources.getString(R.string.snackbar_empty),
+                    Snackbar.LENGTH_LONG
+                )
+                    .show()
+            }
+            else {
+                val battleIntent = Intent(this, BattleActivity::class.java)
+                val gson = Gson()
+                val array = ArrayList<String>()
+
+                for(transformer in adapter.getTransformers()) {
+                    array.add(gson.toJson(transformer))
+                }
+
+                battleIntent.putExtra(KEY_TRANSFORMER_BATTLE, array)
+                startActivity(battleIntent)
+            }
         }
     }
 
